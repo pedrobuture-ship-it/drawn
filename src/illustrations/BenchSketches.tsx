@@ -81,7 +81,7 @@ export function PartDrawing({
           <>
             <path d="m37 44 127-9 27 64-128 16-26-71Z" fill="var(--paper)" />
             <path d="m43 50 117-8 21 52-114 14-24-58Z" strokeWidth=".8" />
-            <path d="m87 62 35-3 10 27-36 4-9-28Z" fill="#ddd9ce" />
+            <path d="m87 62 35-3 10 27-36 4-9-28Z" fill="var(--sketch-chip)" />
             <path d="m85 67-11 2m13 6-11 2m15 6-11 2m43-19 11-2m-8 10 11-2m-8 11 12-2M95 58l-3-9m11 8-2-9m12 8-2-9m-6 43 3 10m6-11 3 10m6-11 3 10" />
             <path
               d="m69 102-4-12 14-2-5-17-15 2-6-17m91 43-4-12 21-4-5-11 17-2M78 56l-5-13m68 12 19-1 5 13"
@@ -223,7 +223,7 @@ export function PartDrawing({
           </>
         )}
       </g>
-      <g stroke="#8d887b" strokeWidth=".7" opacity=".6">
+      <g stroke="var(--sketch-measure)" strokeWidth=".7" opacity=".6">
         <path d="M27 133h46m-38-7v14m30-14v14M196 57v54m-5-45h10m-10 35h10" />
       </g>
     </svg>

@@ -19,6 +19,13 @@ npm audit
 ```
 
 Os testes protegem os dados comerciais originais e validam as mensagens dos dez planos, incluindo adicionais e codificação de caracteres.
+Também verificam a escolha inicial do tema, a prioridade da preferência salva e o funcionamento quando o armazenamento está indisponível.
+
+## Temas claro e escuro
+
+O botão de sol/lua no header alterna a paleta do mesmo caderno técnico. Na primeira visita, o site acompanha `prefers-color-scheme`; uma escolha manual fica salva em `localStorage`, na chave `theme`. Sem escolha salva, mudanças do tema do sistema são acompanhadas automaticamente. A preferência também é sincronizada entre abas.
+
+As cores e texturas dos dois temas estão em `src/theme.css`. `public/theme-init.js` aplica o tema antes do primeiro desenho da página; `src/hooks/useTheme.ts` gerencia a preferência e `src/components/ThemeToggle.tsx` expõe o controle acessível. Transições de cor respeitam `prefers-reduced-motion`. Não há fontes, desenhos ou componentes alternativos para o tema escuro.
 
 ## Produção
 

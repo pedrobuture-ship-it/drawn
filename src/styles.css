@@ -1,3 +1,4 @@
+@import "./theme.css";
 @import "tailwindcss";
 @font-face {
   font-family: "Inter";
@@ -76,10 +77,6 @@
   --font-mono: "DM Mono", monospace;
 }
 :root {
-  --green: #32634a;
-  --yellow: #e7c963;
-  --line: #d6d2c8;
-  --muted: #686458;
   font-family: "Inter", sans-serif;
   color: var(--ink);
   background: var(--paper);
@@ -203,7 +200,7 @@ summary:focus-visible {
 }
 .mode-label {
   font-size: 12px;
-  color: #6b695f;
+  color: var(--label-muted);
 }
 .mode-switch {
   display: flex;
@@ -226,7 +223,7 @@ summary:focus-visible {
   color: var(--paper);
 }
 .mode-switch button:not(.active):hover {
-  background: #e4dfd3;
+  background: var(--surface-hover);
 }
 .menu-button {
   display: none;
@@ -318,7 +315,7 @@ h1 {
   margin: 0 0 16px;
 }
 .hero-description {
-  color: #69665e;
+  color: var(--text-secondary);
   font-size: 15px;
   line-height: 1.8;
   margin: 0;
@@ -349,7 +346,7 @@ h1 {
   color: var(--paper);
 }
 .button-dark:hover {
-  background: #3a3730;
+  background: var(--button-hover);
 }
 .hero-cta .hand {
   position: relative;
@@ -600,7 +597,7 @@ h2 {
   font-size: 14px;
   line-height: 1.85;
   max-width: 305px;
-  color: #69665e;
+  color: var(--text-secondary);
   margin: 0;
   flex-shrink: 0;
 }
@@ -610,14 +607,14 @@ h2 {
 .report-heading {
   display: flex;
   justify-content: space-between;
-  color: #b2b1a6;
+  color: var(--report-label-old);
 }
 .report-heading > h2 {
   align-items: center;
   gap: 10px;
 }
 .report-heading > span:last-child {
-  color: #85877b;
+  color: var(--report-pencil-old);
   font-size: 12px;
 }
 .report-mission strong {
@@ -627,12 +624,12 @@ h2 {
   gap: 20px;
 }
 .report-note > .mono {
-  color: #888c7e;
+  color: var(--report-note-old);
   font-size: 12px;
 }
 .report-note .hand {
   font-size: 22px;
-  color: #e7c963;
+  color: var(--yellow);
   display: flex;
   align-items: center;
   gap: 14px;
@@ -641,9 +638,9 @@ h2 {
 .report-note svg {
   width: 43px;
   height: 32px;
-  color: #e7c963;
-  --paper: #25231f;
-  --orange: #e7c963;
+  color: var(--yellow);
+  --paper: var(--sketch-core);
+  --orange: var(--yellow);
 }
 .drone-service-grid {
   display: grid;
@@ -661,13 +658,13 @@ h2 {
 }
 .card-top .mono {
   font-size: 12px;
-  color: #827d70;
+  color: var(--label-pencil);
 }
 .service-card h3 {
   letter-spacing: -0.7px;
 }
 .service-card p {
-  color: #69665e;
+  color: var(--text-secondary);
   margin: 0 0 24px;
 }
 .card-bottom {
@@ -676,7 +673,7 @@ h2 {
   align-items: center;
   margin-top: auto;
   border-top: 1px solid var(--line);
-  color: #69665e;
+  color: var(--text-secondary);
 }
 .card-bottom svg {
   color: var(--ink);
@@ -727,7 +724,7 @@ h2 {
 .quote-summary p:last-child {
   font-size: 14px;
   line-height: 1.7;
-  color: #69665e;
+  color: var(--text-secondary);
   max-width: 535px;
   margin: 0;
 }
@@ -744,7 +741,7 @@ h2 {
 }
 .process-step {
   position: relative;
-  border-left: 1px solid #bdb8ac;
+  border-left: 1px solid var(--line-process-old);
 }
 .process-step:first-child {
   border-left: 0;
@@ -764,7 +761,7 @@ h2 {
   margin: 25px 0 13px;
 }
 .process-step p {
-  color: #69665e;
+  color: var(--text-secondary);
   margin: 0;
   position: relative;
   z-index: 1;
@@ -789,7 +786,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
 }
 .specialist {
-  border-top: 1px solid #aaa69b;
+  border-top: 1px solid var(--line-secondary);
   padding-top: 27px;
 }
 .specialist-header {
@@ -831,7 +828,7 @@ h2 {
   margin: 0 0 17px;
 }
 .specialist-description {
-  color: #69665e;
+  color: var(--text-secondary);
   margin: 0 0 20px;
 }
 .skill-tags {
@@ -857,7 +854,7 @@ h2 {
   align-items: center;
 }
 .contact-section .section-code {
-  color: #f3d0b8;
+  color: var(--contact-note);
   margin-bottom: 22px;
 }
 .contact-section h2 {
@@ -878,7 +875,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 12px;
-  border-top: 2px solid #e7c963;
+  border-top: 2px solid var(--yellow);
   transform: rotate(-2deg);
   border-radius: 50%;
 }
@@ -895,11 +892,11 @@ h2 {
 }
 .contact-doodle > svg {
   transform: rotate(-12deg);
-  --paper: #c85d32;
-  --orange: #e7c963;
+  --paper: var(--contact-background);
+  --orange: var(--yellow);
 }
 .contact-doodle .hand {
-  color: #f3d0b8;
+  color: var(--contact-note);
   font-size: 30px;
   transform: rotate(-7deg);
   text-align: center;
@@ -908,7 +905,7 @@ h2 {
   position: absolute;
   width: 260px;
   height: 260px;
-  border: 1px dashed #e9b294;
+  border: 1px dashed var(--contact-orbit-line);
   border-radius: 50%;
   z-index: 0;
   opacity: 0.45;
@@ -949,7 +946,7 @@ h2 {
   align-items: center;
   gap: 7px;
   font-size: 13px;
-  color: #69665e;
+  color: var(--text-secondary);
   margin: 13px 0 0;
 }
 .footer-hours p:last-child {
@@ -965,7 +962,7 @@ h2 {
   transition: background 0.2s;
 }
 .back-to-top:hover {
-  background: #e4dfd3;
+  background: var(--surface-hover);
 }
 .footer-bottom {
   border-top: 1px solid var(--line);
@@ -996,8 +993,8 @@ h2 {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--paper);
-  border: 1px solid #23432f;
+  color: var(--whatsapp-ink);
+  border: 1px solid var(--whatsapp-border);
   font-size: 12px;
   transition: transform 0.2s;
 }
@@ -1039,7 +1036,7 @@ h2 {
 .plan-top {
   display: flex;
   justify-content: space-between;
-  color: #69665e;
+  color: var(--text-secondary);
 }
 .plan-top > span:last-child {
   color: var(--ink);
@@ -1068,7 +1065,7 @@ h2 {
   margin-top: 3px;
 }
 .plan-card:not(.recommended) .plan-warranty {
-  color: #69665e;
+  color: var(--text-secondary);
 }
 .plan-card ul {
   list-style: none;
@@ -1081,7 +1078,7 @@ h2 {
   display: flex;
   gap: 9px;
   align-items: center;
-  color: #69665e;
+  color: var(--text-secondary);
 }
 .plan-note {
   transform: rotate(-4deg);
@@ -1095,7 +1092,7 @@ h2 {
   max-width: 850px;
 }
 .extras {
-  border: 1px solid #aaa69b;
+  border: 1px solid var(--line-secondary);
   margin-top: 30px;
 }
 .extras summary {
@@ -1127,7 +1124,7 @@ h2 {
   gap: 12px;
   font-size: 12px;
   flex-shrink: 0;
-  color: #69665e;
+  color: var(--text-secondary);
 }
 .extras[open] summary {
   border-bottom: 1px solid var(--line);
@@ -1140,7 +1137,7 @@ h2 {
 }
 .extras-content > p {
   font-size: 14px;
-  color: #69665e;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin: 0 0 20px;
 }
@@ -1174,7 +1171,7 @@ h2 {
 }
 .extra-option > span > span {
   font-size: 12px;
-  color: #69665e;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 .quote-summary {
@@ -1250,7 +1247,7 @@ h2 {
     border-left: 0;
   }
   .process-step:nth-child(n + 3) {
-    border-top: 1px solid #bdb8ac;
+    border-top: 1px solid var(--line-process-old);
   }
   .specialist h3 {
     font-size: 23px;
@@ -1352,7 +1349,7 @@ h2 {
   }
   .process-step {
     border-left: 0;
-    border-top: 1px solid #bdb8ac;
+    border-top: 1px solid var(--line-process-old);
     padding: 25px 23px 30px;
   }
   .process-step:first-child {
@@ -1631,18 +1628,12 @@ h2 {
   }
 }
 .contact-doodle > svg {
-  color: #f2efe8;
+  color: var(--contact-sketch-ink);
 }
 
 /* Second art pass: a working engineer's notebook, with a restrained ink layer. */
-:root {
-  --paper: #f2efe8;
-  --ink: #25231f;
-  --orange: #c85d32;
-  --pencil: #918c80;
-}
 body {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cg fill='%2325231f' opacity='.035'%3E%3Ccircle cx='12' cy='34' r='.8'/%3E%3Ccircle cx='74' cy='108' r='.6'/%3E%3Ccircle cx='98' cy='18' r='.8'/%3E%3Ccircle cx='46' cy='75' r='.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: var(--paper-texture);
 }
 .header {
   backdrop-filter: none;
@@ -1719,7 +1710,7 @@ body {
   display: block;
   width: 100%;
   height: 15px;
-  color: #958e7d;
+  color: var(--divider-ink);
   pointer-events: none;
 }
 
@@ -1733,7 +1724,7 @@ body {
   top: 101px;
   bottom: 65px;
   left: 31px;
-  border-left: 1px solid #c85d3240;
+  border-left: 1px solid var(--binding-line);
 }
 .hero-topline {
   border-bottom: 0;
@@ -1747,7 +1738,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: #a49e9066;
+  background: var(--ruler-line);
   transform: rotate(-0.13deg);
 }
 .hero-grid {
@@ -1775,9 +1766,9 @@ body {
   width: 9px;
   height: 10px;
   display: block;
-  border: 1px solid #a8a192;
+  border: 1px solid var(--binding-hole-line);
   border-radius: 50%;
-  background: #e2ddcf;
+  background: var(--binding-hole-paper);
   transform: rotate(-7deg);
 }
 .notebook-binding > span {
@@ -1788,7 +1779,7 @@ body {
   left: -5px;
   font-size: 12px;
   letter-spacing: 0.1em;
-  color: #a09a8d;
+  color: var(--binding-label);
 }
 .hero .eyebrow {
   font-size: 12px;
@@ -1811,7 +1802,7 @@ body {
   left: -4px;
   width: calc(100% + 12px);
   transform: rotate(-2deg);
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M3 12Q74 4 149 8T294 7M15 16q87-6 155-4' fill='none' stroke='%23c85d32' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E")
+  background: var(--hero-underline)
     center/100% 100% no-repeat;
 }
 .hero-description {
@@ -1842,7 +1833,7 @@ body {
   right: calc(100% + 3px);
   width: calc(var(--hero-cta-gap) - 6px);
   height: 22px;
-  color: #a14725;
+  color: var(--hand-ink);
   pointer-events: none;
 }
 .hero-arrow-stacked {
@@ -1856,7 +1847,7 @@ body {
   border: 0;
   padding: 0 0 10px;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath d='M22 0H0v22' fill='none' stroke='%2387806f' stroke-opacity='.11' stroke-width='.7'/%3E%3C/svg%3E");
+  background-image: var(--specimen-grid);
 }
 .drawing-panel::before {
   content: "";
@@ -1865,7 +1856,7 @@ body {
   right: 5%;
   bottom: 9px;
   height: 1px;
-  background: #a49e9055;
+  background: var(--specimen-rule);
   transform: rotate(0.5deg);
 }
 .drawing-label {
@@ -1877,7 +1868,7 @@ body {
   max-width: none;
   margin: -6px -4% -10px;
 }
-.technical-drawing g[stroke="#c85d32"] path {
+.technical-drawing .sketch-diagnostics path {
   stroke-dasharray: 400;
   animation: draw-line 0.85s ease-out both;
 }
@@ -1885,7 +1876,7 @@ body {
   position: absolute;
   width: 21px;
   height: 22px;
-  border-color: #aaa393;
+  border-color: var(--specimen-corner);
   border-style: solid;
   pointer-events: none;
 }
@@ -1921,7 +1912,7 @@ body {
 }
 .hero-detail .mono {
   font-size: 12px;
-  color: #827d6e;
+  color: var(--specimen-label);
 }
 .hero-detail .hand {
   font-size: 23px;
@@ -1958,10 +1949,10 @@ body {
 /* A foldable field report: rows, dotted leaders, a handwritten inspection mark. */
 .report {
   padding: 32px 0 31px;
-  background: #252923;
+  background: var(--report-background);
 }
 .report-sheet {
-  border: 1px solid #a6af9666;
+  border: 1px solid var(--report-line);
   position: relative;
   padding: 25px 32px 17px;
 }
@@ -1974,15 +1965,15 @@ body {
   height: 10px;
   background: radial-gradient(
       circle,
-      #252923 2px,
-      #a6af9666 2.5px,
-      #252923 3px,
+      var(--report-background) 2px,
+      var(--report-line) 2.5px,
+      var(--report-background) 3px,
       transparent 3.5px
     )
     left center/19px 10px repeat-x;
 }
 .report-heading {
-  border-bottom: 1px solid #a6af963b;
+  border-bottom: 1px solid var(--report-line-dotted);
   padding-bottom: 20px;
   font-size: 12px;
   align-items: center;
@@ -1992,9 +1983,9 @@ body {
   display: block;
 }
 .report-index {
-  color: #a6af96 !important;
+  color: var(--report-index) !important;
   font-size: 12px !important;
-  border: 1px solid #a6af9666;
+  border: 1px solid var(--report-line);
   padding: 6px 9px;
   transform: rotate(-2deg);
 }
@@ -2007,7 +1998,7 @@ body {
 .report-register-label {
   display: flex;
   justify-content: space-between;
-  color: #969c8c;
+  color: var(--report-label);
   font-size: 12px;
   margin: 0 30px 10px 0;
 }
@@ -2023,11 +2014,11 @@ body {
 }
 .report-row > .mono {
   font-size: 12px;
-  color: #d8dacd;
+  color: var(--report-leader);
   white-space: nowrap;
 }
 .report-leader {
-  border-bottom: 1px dotted #99a18e;
+  border-bottom: 1px dotted var(--report-rule);
   flex: 1;
   min-width: 15px;
   transform: rotate(-0.4deg);
@@ -2038,29 +2029,29 @@ body {
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #f2efe8;
+  color: var(--report-text);
 }
 .report-row > .pen-check {
   width: 22px;
   height: 18px;
-  color: #b5cc9f;
+  color: var(--report-check);
   align-self: center;
 }
 .report-protocol {
   font-size: 12px;
-  color: #899380;
+  color: var(--report-protocol);
   margin: 15px 0 0;
   line-height: 1.8;
 }
 .report-mission {
-  border-left: 1px solid #a6af963b;
+  border-left: 1px solid var(--report-line-dotted);
   position: relative;
   padding: 0 0 24px 35px;
   min-height: 158px;
 }
 .report-mission > .mono {
   font-size: 12px;
-  color: #969c8c;
+  color: var(--report-label);
   display: block;
   margin-bottom: 12px;
 }
@@ -2076,7 +2067,7 @@ body {
 }
 .report-mission-code {
   margin: 22px 0 0 !important;
-  color: #899380 !important;
+  color: var(--report-protocol) !important;
   font-size: 12px !important;
 }
 .report-approved {
@@ -2101,19 +2092,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px dashed #a6af963b;
+  border-top: 1px dashed var(--report-line-dotted);
   margin-top: 19px;
   padding-top: 14px;
 }
 .report-note > .hand {
   font-size: 24px;
-  color: #e7c963;
+  color: var(--yellow);
   max-width: 800px;
   position: relative;
   padding-right: 110px;
 }
 .report-note > .hand .pen-arrow {
-  color: #e7c963;
+  color: var(--yellow);
   position: absolute;
   right: -5px;
   top: -13px;
@@ -2124,8 +2115,8 @@ body {
   width: 55px;
   height: 40px;
   color: var(--yellow);
-  --paper: #252923;
-  --orange: #e7c963;
+  --paper: var(--report-background);
+  --orange: var(--yellow);
   transform: rotate(8deg);
 }
 
@@ -2158,7 +2149,7 @@ body {
   position: relative;
 }
 .section-heading h2 > span {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8c46-6 78-3 111-3s122-2 181-1' stroke='%23c85d32' stroke-opacity='.55' stroke-width='1.5' fill='none'/%3E%3C/svg%3E")
+  background: var(--section-underline)
     0 100%/210px 10px no-repeat;
   padding-bottom: 8px;
 }
@@ -2170,8 +2161,8 @@ body {
   padding-top: 4px;
 }
 .service-card {
-  background: #f7f3ea;
-  border: 1px solid #9e9889;
+  background: var(--surface-card);
+  border: 1px solid var(--card-line);
   padding: 22px 25px 23px;
   min-height: 360px;
   box-shadow: none;
@@ -2193,23 +2184,23 @@ body {
   height: 12px;
   top: -6px;
   right: 24px;
-  background: #dfd6bc;
-  border-inline: 1px solid #c3b796;
+  background: var(--card-tab);
+  border-inline: 1px solid var(--card-tab-line);
   transform: rotate(5deg);
   opacity: 0.75;
 }
 .service-card:hover {
   transform: translate(-3px, -3px);
   box-shadow: 5px 5px 0 var(--ink);
-  background: #f7f3ea;
+  background: var(--surface-card);
 }
 .card-top {
   padding-bottom: 11px;
-  border-bottom: 1px dashed #c5beaf;
+  border-bottom: 1px dashed var(--card-rule);
 }
 .card-top > .mono {
   font-size: 12px;
-  color: #777164;
+  color: var(--card-label);
 }
 .card-top > .mono:last-child {
   color: var(--orange);
@@ -2255,7 +2246,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: #c5beaf;
+  background: var(--card-rule);
   transform: rotate(-0.5deg);
 }
 .service-note {
@@ -2275,8 +2266,8 @@ body {
 .diagnosis,
 .quote-summary {
   position: relative;
-  background: #e7e9df;
-  border: 1px solid #9aa088;
+  background: var(--surface-diagnosis);
+  border: 1px solid var(--diagnosis-line);
   padding: 30px;
   margin-top: 43px;
 }
@@ -2299,22 +2290,22 @@ body {
   border-left: 2px solid var(--green);
 }
 .console-tabs {
-  border-bottom: 1px solid #9e9889;
+  border-bottom: 1px solid var(--card-line);
   margin-bottom: 32px;
 }
 .console-tabs button {
   min-height: 51px;
 }
 .console-tabs button.active {
-  background: #e4dece;
+  background: var(--surface-selected-tab);
   border-bottom-color: var(--orange);
 }
 .plan-grid {
   gap: 28px;
 }
 .plan-card {
-  background: #f7f3ea;
-  border: 1px solid #9e9889;
+  background: var(--surface-card);
+  border: 1px solid var(--card-line);
   padding: 25px 25px 26px;
   transform: rotate(-0.5deg);
   transition:
@@ -2332,7 +2323,7 @@ body {
   box-shadow: 5px 5px 0 var(--ink);
 }
 .plan-card.recommended {
-  background: #f5eed7;
+  background: var(--surface-recommended);
   border-color: var(--ink);
 }
 .plan-card.recommended::before {
@@ -2358,7 +2349,7 @@ body {
 }
 .plan-top {
   padding-block: 5px 13px;
-  border-bottom: 1px dashed #bdb5a5;
+  border-bottom: 1px dashed var(--plan-rule);
   font-size: 12px;
 }
 .plan-top > span:first-child {
@@ -2399,7 +2390,7 @@ body {
   transform: rotate(-7deg);
 }
 .plan-card:not(.recommended) .plan-price > .pen-circle {
-  color: #918875;
+  color: var(--part-label);
   opacity: 0.8;
 }
 .plan-component {
@@ -2415,7 +2406,7 @@ body {
 .plan-component > .mono {
   display: block;
   font-size: 12px;
-  color: #8a8273;
+  color: var(--price-circle);
   text-align: center;
   margin-top: -8px;
 }
@@ -2431,7 +2422,7 @@ body {
   z-index: 1;
 }
 .plan-card.recommended .part-name > span:first-child {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12'%3E%3Cpath d='M3 8q76-7 150-3t139-2' fill='none' stroke='%23c85d32' stroke-width='2'/%3E%3C/svg%3E")
+  background: var(--part-underline)
     left bottom/100% 8px repeat-x;
 }
 /* These callouts share the coordinate system of the drawing or CTA only. */
@@ -2455,7 +2446,7 @@ body {
   left: 12px;
   font-size: 22px;
   letter-spacing: -0.4px;
-  color: #91816b;
+  color: var(--measure-line);
   transform: rotate(-3deg);
   white-space: nowrap;
 }
@@ -2483,12 +2474,12 @@ body {
   min-height: 87px;
   padding-top: 12px;
   margin-bottom: 12px;
-  border-top: 1px dashed #c5beaf;
+  border-top: 1px dashed var(--card-rule);
 }
 .warranty-caption {
   font-size: 12px;
   letter-spacing: 0.08em;
-  color: #817969;
+  color: var(--process-icon);
 }
 .warranty-value {
   position: relative;
@@ -2540,7 +2531,7 @@ body {
   box-shadow: 5px 5px 0 var(--green);
 }
 .extras {
-  border-color: #9e9889;
+  border-color: var(--card-line);
   position: relative;
 }
 .extras::before {
@@ -2550,15 +2541,15 @@ body {
   top: -7px;
   left: 18px;
   right: 18px;
-  border-top: 1px dashed #9e9889;
+  border-top: 1px dashed var(--card-line);
 }
 .extra-option {
   border: 0;
-  border-bottom: 1px dotted #9e9889;
+  border-bottom: 1px dotted var(--card-line);
   padding-inline: 3px;
 }
 .extra-option.checked {
-  background: #e7e9df;
+  background: var(--surface-diagnosis);
   border-color: var(--green);
 }
 .extras[open] summary {
@@ -2567,7 +2558,7 @@ body {
 
 /* Bench workflow: one connected line, with handwritten transitions. */
 .process-section {
-  background: #e9e6dd;
+  background: var(--process-surface);
   border: 0;
   position: relative;
 }
@@ -2578,7 +2569,7 @@ body {
   left: 2%;
   right: 2%;
   height: 1px;
-  background: #b1a996;
+  background: var(--process-rule);
   transform: rotate(-0.1deg);
 }
 .process-section::before {
@@ -2613,12 +2604,12 @@ body {
   pointer-events: none;
 }
 .step-top > .mono {
-  border: 1px solid #9b927e;
+  border: 1px solid var(--step-badge-line);
   padding: 7px 9px;
   transform: rotate(-3deg);
   font-size: 12px;
   color: var(--ink);
-  background: #f2efe8;
+  background: var(--paper);
 }
 .process-step:nth-child(2) .step-top > .mono {
   transform: rotate(2deg);
@@ -2627,7 +2618,7 @@ body {
   transform: rotate(-1deg);
 }
 .step-top > svg:not(.step-connector) {
-  color: #817969;
+  color: var(--process-icon);
   width: 21px;
 }
 .step-connector {
@@ -2636,7 +2627,7 @@ body {
   left: -12px;
   width: calc(100% + var(--process-gap) + 8px);
   height: 28px;
-  color: #8f816c;
+  color: var(--step-arrow);
   pointer-events: none;
 }
 .process-step h3 {
@@ -2649,7 +2640,7 @@ body {
 }
 .process-step h3 > span {
   padding-bottom: 8px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 10' preserveAspectRatio='none'%3E%3Cpath d='M1 7q73-6 176-4' fill='none' stroke='%23978a70' stroke-width='1.4'/%3E%3C/svg%3E")
+  background: var(--step-underline)
     bottom/100% 8px no-repeat;
 }
 .process-step p {
@@ -2662,7 +2653,7 @@ body {
   bottom: 11px;
   left: 0;
   right: auto;
-  color: #978e7b;
+  color: var(--step-number);
 }
 .step-number::before {
   content: "BANCADA / ";
@@ -2684,8 +2675,8 @@ body {
 }
 .specialist {
   padding: 24px 28px 17px;
-  border: 1px solid #b4ab99;
-  background: #f7f3ea;
+  border: 1px solid var(--team-line);
+  background: var(--surface-card);
   position: relative;
   transform: rotate(-0.2deg);
 }
@@ -2699,8 +2690,8 @@ body {
   height: 10px;
   top: -5px;
   left: 28px;
-  border: 1px solid #cbc0a8;
-  background: #e2dac5;
+  border: 1px solid var(--team-header-line);
+  background: var(--team-header-surface);
   transform: rotate(-5deg);
 }
 .specialist-header {
@@ -2709,10 +2700,10 @@ body {
 }
 .person-record {
   font-size: 12px;
-  color: #8f8676;
+  color: var(--team-label);
   width: 100%;
   padding-bottom: 12px;
-  border-bottom: 1px dashed #c5beaf;
+  border-bottom: 1px dashed var(--card-rule);
 }
 .initials {
   border: 0;
@@ -2772,7 +2763,7 @@ body {
   gap: 10px;
   margin-top: 25px;
   padding-top: 14px;
-  border-top: 1px dashed #c5beaf;
+  border-top: 1px dashed var(--card-rule);
 }
 .specialist-bench-note > .part-drawing {
   width: 101px;
@@ -2798,7 +2789,7 @@ body {
 
 /* The final mission uses the same paper/pen grammar, in orange ink. */
 .contact-section {
-  background: #c85d32;
+  background: var(--contact-background);
   padding-block: 67px;
 }
 .contact-section::before {
@@ -2808,14 +2799,14 @@ body {
   bottom: 13px;
   left: 22px;
   right: 22px;
-  border: 1px solid #f2efe855;
+  border: 1px solid var(--contact-line);
   pointer-events: none;
   transform: rotate(-0.2deg);
 }
 .contact-section h2 span::after {
   border-top: 0;
   border-radius: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8q90-8 150-3t141-2M9 11l92-4' stroke='%23e7c963' stroke-width='2' fill='none'/%3E%3C/svg%3E")
+  background: var(--contact-underline)
     center/100% 100% no-repeat;
 }
 .contact-doodle > .contact-orbit {
@@ -2823,7 +2814,7 @@ body {
   width: 250px;
   height: 240px;
   border-radius: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 250'%3E%3Cpath d='M200 22c-56-30-149-13-173 52-37 80 32 164 114 153 85-8 133-108 94-174-10-17-24-28-41-33M204 14C107-19 0 59 17 153' fill='none' stroke='%23e7c963' stroke-width='1' stroke-opacity='.6' stroke-dasharray='3 4'/%3E%3C/svg%3E")
+  background: var(--contact-orbit)
     center/100% 100% no-repeat;
 }
 .contact-doodle > .hand {
@@ -2843,7 +2834,7 @@ body {
 .floating-whatsapp {
   box-shadow: 3px 3px 0 var(--ink);
   border-radius: 0;
-  background: var(--green);
+  background: var(--whatsapp);
 }
 .floating-whatsapp:hover {
   transform: translate(-3px, -3px);
@@ -3322,7 +3313,7 @@ body {
   .report-mission {
     padding: 18px 0 0;
     border-left: 0;
-    border-top: 1px dashed #a6af963b;
+    border-top: 1px dashed var(--report-line-dotted);
     min-height: 127px;
   }
   .report-mission > strong {
@@ -3505,7 +3496,7 @@ body {
   .process-grid {
     gap: 0;
     padding-left: 20px;
-    border-left: 1px solid #b1a48d;
+    border-left: 1px solid var(--mobile-timeline);
     margin-left: 4px;
   }
   .process-step,
@@ -3520,7 +3511,7 @@ body {
     left: -25px;
     width: 9px;
     height: 8px;
-    background: #e9e6dd;
+    background: var(--process-surface);
     border: 1px solid var(--orange);
     border-radius: 50%;
     transform: rotate(-7deg);
@@ -3715,7 +3706,7 @@ body {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .technical-drawing g[stroke="#c85d32"] path {
+  .technical-drawing .sketch-diagnostics path {
     animation: none;
     stroke-dasharray: none;
   }
@@ -3801,15 +3792,15 @@ body {
 .eyebrow,
 .section-code,
 .plan-top > span:first-child {
-  color: #a14725;
+  color: var(--hand-ink);
 }
 .warranty-caption,
 .plan-component > .mono,
 .part-note {
-  color: #6d6251;
+  color: var(--caption-pencil);
 }
 .hero-cta .hand {
-  color: #a14725;
+  color: var(--hand-ink);
 }
 .console-tabs {
   position: relative;
@@ -3909,17 +3900,17 @@ body {
   color: var(--muted);
 }
 .service-card .card-top .mono:last-child {
-  color: #a14725;
+  color: var(--hand-ink);
 }
 .hand,
 .hero-detail .hand,
 .plan-card.recommended .part-note {
-  color: #a14725;
+  color: var(--hand-ink);
 }
 .hero-detail .mono,
 .specialist-role,
 .console-tabs button.active {
-  color: #a14725;
+  color: var(--hand-ink);
 }
 .service-card p,
 .step-number,
@@ -3938,7 +3929,7 @@ body {
 }
 .technical-drawing .svg-hand,
 .part-drawing .svg-hand {
-  fill: #a14725;
+  fill: var(--hand-ink);
 }
 @media (max-width: 650px) {
   .technical-drawing .svg-tech {
@@ -3950,7 +3941,7 @@ body {
   color: var(--yellow);
 }
 .contact-section .section-code {
-  color: #12100e;
+  color: var(--contact-code);
 }
 @media (max-width: 650px) {
   .contact-doodle .hand {

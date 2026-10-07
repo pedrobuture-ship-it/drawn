@@ -63,3 +63,15 @@ Resultados obtidos:
 - `git diff --check`: sem problemas de whitespace.
 
 Requisitos e comandos de execução estão em [README.md](README.md).
+
+## Temas claro e escuro — 7 de outubro de 2026
+
+O modo claro preserva a aparência anterior. A comparação de 551 elementos do conteúdo e rodapé, após estabilizar as animações, não encontrou diferenças em cores, fundos, bordas, fontes, dimensões ou transformações. As coordenadas, curvas e atributos geométricos dos SVGs também permanecem iguais. Dados comerciais, telefone e mensagens não foram alterados.
+
+O modo escuro utiliza as mesmas seções e ilustrações, com papel noturno, traços ciano e notas laranja. As paletas e texturas ficam em `src/theme.css`, sem duplicar componentes. O WhatsApp mantém verde reconhecível. As transições de tema se limitam a superfícies e controles e são desativadas com movimento reduzido.
+
+Foram verificadas as larguras 1440, 1280, 1024, 900, 768, 430, 390, 375 e 360 px, nos dois temas e modos. O seletor fica acessível e o conteúdo estável não apresenta rolagem horizontal da página. Cards e anotações mantêm suas posições. Menu mobile, Escape, quatro tabs de consoles, foco visível e alternância com Enter/Space foram conferidos. A ficha de reparo e o link preparado de WhatsApp permanecem iguais ao alternar o tema.
+
+As duas preferências foram mantidas após recarregar a página. Testes de inicialização cobrem sistema claro/escuro, preferência salva sobrepondo o sistema, valores inválidos e armazenamento indisponível. O script bloqueante no head aplica o tema antes da interface. A versão compilada foi conferida em desktop e mobile; os textos HTML do modo escuro passaram pela leitura de contraste de 4,5:1, ou 3:1 para textos grandes.
+
+Validação desta alteração: 20 testes aprovados, build TypeScript/Vite concluído e `git diff --check` sem problemas. Nenhuma dependência foi adicionada.

@@ -40,7 +40,7 @@ function Drone() {
       {/* Quadrotor viewed from above, with offset outlines and construction lines. */}
       <g
         fill="none"
-        stroke="#777970"
+        stroke="var(--sketch-secondary)"
         strokeWidth="1"
         opacity=".45"
         strokeDasharray="4 6"
@@ -49,28 +49,28 @@ function Drone() {
         <ellipse cx="295" cy="246" rx="208" ry="151" />
       </g>
       <g
-        fill="#eeece3"
-        stroke="#25231f"
+        fill="var(--sketch-arm)"
+        stroke="var(--sketch-ink)"
         strokeWidth="2.3"
         strokeLinejoin="round"
       >
         <path d="m266 223-107-80-23 25 113 95zm58 0 105-80 27 26-116 95zM260 267l-103 83 24 28 105-93zm72 0 110 85-25 28-106-93z" />
         <path
           d="m252 181 45-15 43 17 17 74-22 47-43 20-43-20-18-45z"
-          fill="#deddd3"
+          fill="var(--sketch-shell)"
         />
         <path
           d="m260 185 36-9 35 11 11 66-17 39-32 15-32-15-15-39z"
-          fill="#f7f3ea"
+          fill="var(--surface-card)"
         />
         <path d="m260 184 3 35 29 17 38-20 1-29M263 265l29 21 36-20M293 237v49" />
-        <path d="m279 166 1-28 31 1 1 28" fill="#e0dfd4" />
-        <path d="m276 140 41-1 2-21-43-1z" fill="#25231f" />
-        <circle cx="297" cy="129" r="8" fill="#f2efe8" />
+        <path d="m279 166 1-28 31 1 1 28" fill="var(--sketch-shaft)" />
+        <path d="m276 140 41-1 2-21-43-1z" fill="var(--sketch-core)" />
+        <circle cx="297" cy="129" r="8" fill="var(--paper)" />
         <circle cx="297" cy="129" r="4" />
-        <path d="M278 300v23h29v-23" fill="#deddd3" />
+        <path d="M278 300v23h29v-23" fill="var(--sketch-shell)" />
       </g>
-      <g fill="#e9e7dd" stroke="#25231f" strokeWidth="2.3">
+      <g fill="var(--sketch-blade)" stroke="var(--sketch-ink)" strokeWidth="2.3">
         <circle cx="147" cy="153" r="24" />
         <circle cx="442" cy="153" r="24" />
         <circle cx="167" cy="365" r="24" />
@@ -81,14 +81,14 @@ function Drone() {
         <circle cx="167" cy="365" r="7" />
         <circle cx="431" cy="365" r="7" />
       </g>
-      <g stroke="#25231f" strokeWidth="1.1" fill="none">
+      <g stroke="var(--sketch-ink)" strokeWidth="1.1" fill="none">
         <path d="m254 237 10 8m-12 1 10 8m-11 1 10 8m77-25-11 8m13 1-10 8m11 1-10 8" />
         <circle cx="267" cy="193" r="2" />
         <circle cx="326" cy="194" r="2" />
         <circle cx="261" cy="284" r="2" />
         <circle cx="329" cy="283" r="2" />
       </g>
-      <g fill="none" stroke="#c85d32" strokeWidth="2" strokeLinecap="round">
+      <g fill="none" className="sketch-diagnostics" stroke="var(--orange)" strokeWidth="2" strokeLinecap="round">
         <ellipse
           cx="442"
           cy="153"
@@ -98,7 +98,7 @@ function Drone() {
         />
         <path d="M492 104c-2 19-10 28-21 29m4-10-5 11 13-2M85 278q65 5 83 58m-2-12 4 14-13-6M364 83q-34 6-51 33m1-12-3 14 13-5" />
       </g>
-      <g className="svg-hand" fill="#c85d32">
+      <g className="svg-hand" fill="var(--orange)">
         <text x="398" y="90" transform="rotate(-5 398 90)">
           queda detectada
         </text>
@@ -108,18 +108,18 @@ function Drone() {
         <text x="310" y="70" transform="rotate(-4 310 70)">
           gimbal → conferir
         </text>
-        <text x="230" y="434" fill="#32634a" transform="rotate(-3 230 434)">
+        <text x="230" y="434" fill="var(--green)" transform="rotate(-3 230 434)">
           isso aqui deveria estar voando ↑
         </text>
       </g>
-      <g className="svg-tech" fill="#777970">
+      <g className="svg-tech" fill="var(--sketch-secondary)">
         <text x="37" y="407">
           VISTA SUPERIOR / ESC. 1:4
         </text>
         <text x="440" y="277">
           MOTOR 04
         </text>
-        <path d="M426 272h-62" stroke="#777970" strokeWidth=".8" />
+        <path d="M426 272h-62" stroke="var(--sketch-secondary)" strokeWidth=".8" />
       </g>
     </g>
   );
@@ -130,7 +130,7 @@ function Controller() {
     <g>
       <g
         fill="none"
-        stroke="#777970"
+        stroke="var(--sketch-secondary)"
         strokeWidth="1"
         opacity=".45"
         strokeDasharray="4 6"
@@ -139,28 +139,28 @@ function Controller() {
         <ellipse cx="300" cy="252" rx="220" ry="135" />
       </g>
       <g
-        fill="#f7f3ea"
-        stroke="#25231f"
+        fill="var(--surface-card)"
+        stroke="var(--sketch-ink)"
         strokeWidth="2.4"
         strokeLinejoin="round"
       >
         <path d="M144 177c28-47 72-36 104-29h101c37-10 75-13 103 35 24 42 61 158 34 183-26 27-74-36-94-60H209c-22 32-62 88-94 64-31-24 7-151 29-193z" />
         <path
           d="m177 154-12-20 62-10 13 24m119-1 14-23 57 13-11 20"
-          fill="#d6d6cd"
+          fill="var(--sketch-shoulder)"
         />
-        <path d="M217 156h153l-5 83H222z" fill="#deddd4" />
+        <path d="M217 156h153l-5 83H222z" fill="var(--sketch-button)" />
         <path d="m157 198-34 123m311-123 41 123M211 304l24-40h129l28 40" />
         <path
           d="M155 207h16v-16h21v16h16v21h-16v16h-21v-16h-16z"
-          fill="#deddd4"
+          fill="var(--sketch-button)"
         />
-        <circle cx="244" cy="281" r="32" fill="#deddd4" />
-        <circle cx="244" cy="281" r="23" fill="#25231f" />
-        <circle cx="244" cy="281" r="18" fill="#53544b" />
-        <circle cx="355" cy="281" r="32" fill="#deddd4" />
-        <circle cx="355" cy="281" r="23" fill="#25231f" />
-        <circle cx="355" cy="281" r="18" fill="#53544b" />
+        <circle cx="244" cy="281" r="32" fill="var(--sketch-button)" />
+        <circle cx="244" cy="281" r="23" fill="var(--sketch-core)" />
+        <circle cx="244" cy="281" r="18" fill="var(--sketch-stick)" />
+        <circle cx="355" cy="281" r="32" fill="var(--sketch-button)" />
+        <circle cx="355" cy="281" r="23" fill="var(--sketch-core)" />
+        <circle cx="355" cy="281" r="18" fill="var(--sketch-stick)" />
         <circle cx="415" cy="191" r="11" />
         <circle cx="437" cy="217" r="11" />
         <circle cx="391" cy="217" r="11" />
@@ -175,7 +175,7 @@ function Controller() {
           strokeWidth="1.5"
         />
       </g>
-      <g fill="none" stroke="#c85d32" strokeWidth="2" strokeLinecap="round">
+      <g fill="none" className="sketch-diagnostics" stroke="var(--orange)" strokeWidth="2" strokeLinecap="round">
         <ellipse
           cx="244"
           cy="282"
@@ -185,7 +185,7 @@ function Controller() {
         />
         <path d="M96 282q53-41 112-6m-11-8 13 8-13 4M446 114q-10 31-24 58m-2-11 1 14 10-7M285 368q-5-25-24-45m2 13-4-15 14 6" />
       </g>
-      <g className="svg-hand" fill="#c85d32">
+      <g className="svg-hand" fill="var(--orange)">
         <text x="34" y="271" transform="rotate(-5 34 271)">
           drift detectado
         </text>
@@ -195,11 +195,11 @@ function Controller() {
         <text x="269" y="395" transform="rotate(-3 269 395)">
           culpado nº 01
         </text>
-        <text x="241" y="437" fill="#32634a" transform="rotate(-3 241 437)">
+        <text x="241" y="437" fill="var(--green)" transform="rotate(-3 241 437)">
           trocamos isso aqui ↑
         </text>
       </g>
-      <g className="svg-tech" fill="#777970">
+      <g className="svg-tech" fill="var(--sketch-secondary)">
         <text x="33" y="412">
           VISTA FRONTAL / ESC. 1:2
         </text>

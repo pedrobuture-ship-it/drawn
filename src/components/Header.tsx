@@ -3,6 +3,7 @@ import { Menu, X, MessageCircle } from "lucide-react";
 import type { Mode } from "../types";
 import { Brand } from "./Brand";
 import { ModeSwitcher } from "./ModeSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 import { WhatsAppCTA } from "./WhatsAppCTA";
 import { useContactMessage } from "../context/RepairQuote";
 
@@ -43,6 +44,7 @@ export function Header({
               setOpen(false);
             }}
           />
+          <ThemeToggle />
           <button
             type="button"
             ref={menuButton}

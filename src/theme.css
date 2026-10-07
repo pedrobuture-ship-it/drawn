@@ -1,0 +1,349 @@
+/* The original paper palette and its night inks. Geometry lives in styles.css. */
+:root {
+  --report-text: #f2efe8;
+  --hero-title: #25231f;
+  --hero-support: #25231f;
+  --button-ink: #f2efe8;
+  --shadow-ink: #25231f;
+  --contact-sketch-ink: #f2efe8;
+  --grid-line: transparent;
+  --glow-border: transparent;
+  --glow-card: transparent;
+  --glow-button: transparent;
+  --glow-button-hover: transparent;
+
+  --paper: #f2efe8;
+  --ink: #25231f;
+  --orange: #c85d32;
+  --green: #32634a;
+  --yellow: #e7c963;
+  --line: #d6d2c8;
+  --muted: #686458;
+  --pencil: #918c80;
+  --label-muted: #6b695f;
+  --surface-hover: #e4dfd3;
+  --button-hover: #3a3730;
+  --text-secondary: #69665e;
+  --report-label-old: #b2b1a6;
+  --report-pencil-old: #85877b;
+  --report-note-old: #888c7e;
+  --label-pencil: #827d70;
+  --line-process-old: #bdb8ac;
+  --line-secondary: #aaa69b;
+  --contact-note: #f3d0b8;
+  --contact-orbit-line: #e9b294;
+  --whatsapp-border: #23432f;
+  --divider-ink: #958e7d;
+  --binding-line: #c85d3240;
+  --ruler-line: #a49e9066;
+  --binding-hole-line: #a8a192;
+  --binding-hole-paper: #e2ddcf;
+  --binding-label: #a09a8d;
+  --specimen-rule: #a49e9055;
+  --specimen-corner: #aaa393;
+  --specimen-label: #827d6e;
+  --report-background: #252923;
+  --report-line: #a6af9666;
+  --report-line-dotted: #a6af963b;
+  --report-index: #a6af96;
+  --report-label: #969c8c;
+  --report-leader: #d8dacd;
+  --report-rule: #99a18e;
+  --report-check: #b5cc9f;
+  --report-protocol: #899380;
+  --surface-card: #f7f3ea;
+  --card-line: #9e9889;
+  --card-tab: #dfd6bc;
+  --card-tab-line: #c3b796;
+  --card-rule: #c5beaf;
+  --card-label: #777164;
+  --surface-diagnosis: #e7e9df;
+  --diagnosis-line: #9aa088;
+  --surface-selected-tab: #e4dece;
+  --surface-recommended: #f5eed7;
+  --plan-rule: #bdb5a5;
+  --part-label: #918875;
+  --price-circle: #8a8273;
+  --measure-line: #91816b;
+  --process-icon: #817969;
+  --process-surface: #e9e6dd;
+  --process-rule: #b1a996;
+  --step-badge-line: #9b927e;
+  --step-arrow: #8f816c;
+  --step-number: #978e7b;
+  --team-line: #b4ab99;
+  --team-header-line: #cbc0a8;
+  --team-header-surface: #e2dac5;
+  --team-label: #8f8676;
+  --contact-line: #f2efe855;
+  --mobile-timeline: #b1a48d;
+  --caption-pencil: #6d6251;
+  --contact-code: #12100e;
+  --hand-ink: #a14725;
+  --sketch-ink: #25231f;
+  --sketch-secondary: #777970;
+  --sketch-arm: #eeece3;
+  --sketch-shell: #deddd3;
+  --sketch-shaft: #e0dfd4;
+  --sketch-core: #25231f;
+  --sketch-blade: #e9e7dd;
+  --sketch-shoulder: #d6d6cd;
+  --sketch-button: #deddd4;
+  --sketch-stick: #53544b;
+  --sketch-chip: #ddd9ce;
+  --sketch-measure: #8d887b;
+  --contact-background: #c85d32;
+  --whatsapp: #32634a;
+  --whatsapp-ink: #f2efe8;
+  --paper-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cg fill='%2325231f' opacity='.035'%3E%3Ccircle cx='12' cy='34' r='.8'/%3E%3Ccircle cx='74' cy='108' r='.6'/%3E%3Ccircle cx='98' cy='18' r='.8'/%3E%3Ccircle cx='46' cy='75' r='.5'/%3E%3C/g%3E%3C/svg%3E");
+  --hero-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M3 12Q74 4 149 8T294 7M15 16q87-6 155-4' fill='none' stroke='%23c85d32' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E");
+  --specimen-grid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath d='M22 0H0v22' fill='none' stroke='%2387806f' stroke-opacity='.11' stroke-width='.7'/%3E%3C/svg%3E");
+  --section-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8c46-6 78-3 111-3s122-2 181-1' stroke='%23c85d32' stroke-opacity='.55' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  --part-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12'%3E%3Cpath d='M3 8q76-7 150-3t139-2' fill='none' stroke='%23c85d32' stroke-width='2'/%3E%3C/svg%3E");
+  --step-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 10' preserveAspectRatio='none'%3E%3Cpath d='M1 7q73-6 176-4' fill='none' stroke='%23978a70' stroke-width='1.4'/%3E%3C/svg%3E");
+  --contact-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8q90-8 150-3t141-2M9 11l92-4' stroke='%23e7c963' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  --contact-orbit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 250'%3E%3Cpath d='M200 22c-56-30-149-13-173 52-37 80 32 164 114 153 85-8 133-108 94-174-10-17-24-28-41-33M204 14C107-19 0 59 17 153' fill='none' stroke='%23e7c963' stroke-width='1' stroke-opacity='.6' stroke-dasharray='3 4'/%3E%3C/svg%3E");
+}
+
+:root[data-theme="dark"] {
+  --report-text: #EAFBFF;
+  --hero-title: #67E8F9;
+  --hero-support: #D6F4FA;
+  --button-ink: #041014;
+  --shadow-ink: #020609;
+  --contact-sketch-ink: #22D3EE;
+  --grid-line: rgba(34,211,238,.035);
+  --glow-border: rgba(34,211,238,.08);
+  --glow-card: rgba(34,211,238,.035);
+  --glow-button: rgba(34,211,238,.25);
+  --glow-button-hover: rgba(34,211,238,.45);
+
+  --paper: #050B10;
+  --ink: #EAFBFF;
+  --orange: #FF6B2C;
+  --green: #22D3EE;
+  --yellow: #22D3EE;
+  --line: rgba(34,211,238,.28);
+  --muted: #8DA7B5;
+  --pencil: #8DA7B5;
+  --label-muted: #8DA7B5;
+  --surface-hover: #0A1726;
+  --button-hover: #67E8F9;
+  --text-secondary: #8DA7B5;
+  --report-label-old: #8DA7B5;
+  --report-pencil-old: #8DA7B5;
+  --report-note-old: #8DA7B5;
+  --label-pencil: #8DA7B5;
+  --line-process-old: rgba(34,211,238,.28);
+  --line-secondary: rgba(34,211,238,.28);
+  --contact-note: #FF7038;
+  --contact-orbit-line: rgba(34,211,238,.28);
+  --whatsapp-border: #32634a;
+  --divider-ink: rgba(34,211,238,.48);
+  --binding-line: rgba(34,211,238,.28);
+  --ruler-line: rgba(34,211,238,.28);
+  --binding-hole-line: rgba(34,211,238,.45);
+  --binding-hole-paper: #0A1726;
+  --binding-label: #8DA7B5;
+  --specimen-rule: rgba(34,211,238,.22);
+  --specimen-corner: rgba(34,211,238,.48);
+  --specimen-label: #22D3EE;
+  --report-background: #08141F;
+  --report-line: rgba(34,211,238,.28);
+  --report-line-dotted: rgba(34,211,238,.18);
+  --report-index: #22D3EE;
+  --report-label: #8DA7B5;
+  --report-leader: #8DA7B5;
+  --report-rule: rgba(34,211,238,.28);
+  --report-check: #22D3EE;
+  --report-protocol: #8DA7B5;
+  --surface-card: #08141F;
+  --card-line: rgba(34,211,238,.28);
+  --card-tab: #0A1726;
+  --card-tab-line: rgba(34,211,238,.28);
+  --card-rule: rgba(34,211,238,.28);
+  --card-label: #8DA7B5;
+  --surface-diagnosis: #0A1726;
+  --diagnosis-line: rgba(34,211,238,.28);
+  --surface-selected-tab: #0A1726;
+  --surface-recommended: #0A1726;
+  --plan-rule: rgba(34,211,238,.28);
+  --part-label: #8DA7B5;
+  --price-circle: #FF6B2C;
+  --measure-line: rgba(34,211,238,.45);
+  --process-icon: #22D3EE;
+  --process-surface: #061018;
+  --process-rule: rgba(34,211,238,.28);
+  --step-badge-line: rgba(34,211,238,.28);
+  --step-arrow: rgba(34,211,238,.65);
+  --step-number: #8DA7B5;
+  --team-line: rgba(34,211,238,.28);
+  --team-header-line: rgba(34,211,238,.28);
+  --team-header-surface: #0A1726;
+  --team-label: #8DA7B5;
+  --contact-line: rgba(34,211,238,.28);
+  --mobile-timeline: rgba(34,211,238,.28);
+  --caption-pencil: #8DA7B5;
+  --contact-code: #22D3EE;
+  --hand-ink: #FF7038;
+  --sketch-ink: #22D3EE;
+  --sketch-secondary: #22D3EE;
+  --sketch-arm: #08141F;
+  --sketch-shell: #0A1726;
+  --sketch-shaft: #0A1726;
+  --sketch-core: #050B10;
+  --sketch-blade: #061018;
+  --sketch-shoulder: #0A1726;
+  --sketch-button: #0A1726;
+  --sketch-stick: #0A1726;
+  --sketch-chip: #0A1726;
+  --sketch-measure: #22D3EE;
+  --contact-background: #08141F;
+  --whatsapp: #25D366;
+  --whatsapp-ink: #041014;
+  --paper-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cg fill='%2322D3EE' opacity='.035'%3E%3Ccircle cx='12' cy='34' r='.8'/%3E%3Ccircle cx='74' cy='108' r='.6'/%3E%3Ccircle cx='98' cy='18' r='.8'/%3E%3Ccircle cx='46' cy='75' r='.5'/%3E%3C/g%3E%3C/svg%3E");
+  --hero-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M3 12Q74 4 149 8T294 7M15 16q87-6 155-4' fill='none' stroke='%23FF6B2C' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E");
+  --specimen-grid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath d='M22 0H0v22' fill='none' stroke='%2322D3EE' stroke-opacity='.11' stroke-width='.7'/%3E%3C/svg%3E");
+  --section-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8c46-6 78-3 111-3s122-2 181-1' stroke='%23FF6B2C' stroke-opacity='.55' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  --part-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12'%3E%3Cpath d='M3 8q76-7 150-3t139-2' fill='none' stroke='%23FF6B2C' stroke-width='2'/%3E%3C/svg%3E");
+  --step-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 10' preserveAspectRatio='none'%3E%3Cpath d='M1 7q73-6 176-4' fill='none' stroke='%2322D3EE' stroke-width='1.4'/%3E%3C/svg%3E");
+  --contact-underline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8q90-8 150-3t141-2M9 11l92-4' stroke='%23FF6B2C' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  --contact-orbit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 250'%3E%3Cpath d='M200 22c-56-30-149-13-173 52-37 80 32 164 114 153 85-8 133-108 94-174-10-17-24-28-41-33M204 14C107-19 0 59 17 153' fill='none' stroke='%23FF6B2C' stroke-width='1' stroke-opacity='.6' stroke-dasharray='3 4'/%3E%3C/svg%3E");
+}
+
+/* One small bench control; no alternate header or duplicate page tree. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--pencil);
+  border-radius: 0;
+  transform: rotate(-1deg);
+}
+.theme-toggle svg { width: 21px; height: 21px; stroke-width: 1.7; }
+.theme-toggle:hover { background: var(--surface-hover); }
+
+/* Color changes are limited to surfaces/controls, with existing card motion intact. */
+html[data-theme],
+[data-theme] .header,
+[data-theme] .report,
+[data-theme] .process-section,
+[data-theme] .contact-section,
+[data-theme] .mode-switch button,
+[data-theme] .theme-toggle,
+[data-theme] .console-tabs button {
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+[data-theme] .button {
+  transition: transform .2s, background-color 250ms ease, color 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+[data-theme] .service-card,
+[data-theme] .plan-card,
+[data-theme] .specialist {
+  transition: transform .2s, background-color 250ms ease, color 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+/* Night inks on the very same notebook. All rules below change colors only. */
+[data-theme="dark"] body {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+[data-theme="dark"] .header { background: var(--paper); color: var(--sketch-ink); }
+[data-theme="dark"] .brand strong { color: var(--ink); }
+[data-theme="dark"] .brand,
+[data-theme="dark"] .mode-label,
+[data-theme="dark"] .hero-topline,
+[data-theme="dark"] .eyebrow,
+[data-theme="dark"] .section-code,
+[data-theme="dark"] .drawing-label,
+[data-theme="dark"] .hero-detail .mono,
+[data-theme="dark"] .drawing-footer,
+[data-theme="dark"] .plan-top > span:first-child { color: var(--sketch-ink); }
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .contact-section h2 { color: var(--hero-title); }
+[data-theme="dark"] .hero-statement { color: var(--hero-support); }
+[data-theme="dark"] .hand,
+[data-theme="dark"] .report .hand { color: var(--hand-ink); }
+[data-theme="dark"] .mode-switch { border-color: var(--line); }
+[data-theme="dark"] .mode-switch button.active { background: var(--sketch-ink); color: var(--paper); }
+[data-theme="dark"] .theme-toggle {
+  color: var(--sketch-ink);
+  border-color: var(--line);
+  box-shadow: 0 0 10px var(--glow-border);
+}
+[data-theme="dark"] .button {
+  color: var(--sketch-ink);
+  border-color: var(--sketch-ink);
+}
+[data-theme="dark"] .button-dark,
+[data-theme="dark"] .button-green {
+  background: var(--sketch-ink);
+  color: var(--button-ink);
+  box-shadow: 0 0 20px var(--glow-button);
+}
+[data-theme="dark"] .button:hover {
+  box-shadow: 0 0 30px var(--glow-button-hover);
+}
+[data-theme="dark"] .button-dark:hover,
+[data-theme="dark"] .button-green:hover { background: var(--button-hover); }
+[data-theme="dark"] .skip-link { background: var(--sketch-ink); color: var(--paper); }
+[data-theme="dark"] .recommend-label { color: var(--paper); }
+[data-theme="dark"] ::selection { background: var(--sketch-ink); color: var(--paper); }
+[data-theme="dark"] .service-card:hover,
+[data-theme="dark"] .plan-card:hover,
+[data-theme="dark"] .specialist:hover { box-shadow: 5px 5px 0 var(--shadow-ink); }
+[data-theme="dark"] .plan-card.recommended { border-color: var(--sketch-ink); }
+[data-theme="dark"] .plan-card.selected { box-shadow: 5px 5px 0 var(--green); }
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .specialist { box-shadow: 0 0 12px var(--glow-card); }
+[data-theme="dark"] .part-drawing,
+[data-theme="dark"] .hero-trust svg,
+[data-theme="dark"] .back-to-top,
+[data-theme="dark"] .footer-contact svg,
+[data-theme="dark"] .footer-hours svg,
+[data-theme="dark"] .card-bottom svg { color: var(--sketch-ink); }
+[data-theme="dark"] .technical-drawing .svg-hand text { fill: var(--hand-ink); }
+[data-theme="dark"] .report { color: var(--ink); }
+[data-theme="dark"] .report-row,
+[data-theme="dark"] .report-heading { color: var(--ink); }
+[data-theme="dark"] .report .report-approved,
+[data-theme="dark"] .report-approved > svg,
+[data-theme="dark"] .report-note .hand,
+[data-theme="dark"] .report-note > .hand .pen-arrow { color: var(--hand-ink); }
+[data-theme="dark"] .report-note > svg { --orange: var(--hand-ink); }
+[data-theme="dark"] .contact-doodle > svg {
+  color: var(--sketch-ink);
+  --orange: var(--hand-ink);
+}
+[data-theme="dark"] .contact-doodle .hand { color: var(--hand-ink); }
+[data-theme="dark"] .contact-section :focus-visible { outline-color: var(--sketch-ink); }
+[data-theme="dark"] .floating-whatsapp {
+  color: var(--whatsapp-ink);
+  box-shadow: 3px 3px 0 var(--shadow-ink);
+}
+[data-theme="dark"] .floating-whatsapp:hover { box-shadow: 5px 5px 0 var(--shadow-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme],
+  [data-theme] .header,
+  [data-theme] .report,
+  [data-theme] .process-section,
+  [data-theme] .contact-section,
+  [data-theme] .mode-switch button,
+  [data-theme] .theme-toggle,
+  [data-theme] .console-tabs button,
+  [data-theme] .button,
+  [data-theme] .service-card,
+  [data-theme] .plan-card,
+  [data-theme] .specialist { transition: none; }
+}
+
+[data-theme="dark"] .contact-section .button { border-color: var(--sketch-ink); }
