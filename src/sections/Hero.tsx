@@ -5,6 +5,11 @@ import {
   ShieldCheck,
   Wrench,
 } from "lucide-react";
+import {
+  PenArrow,
+  SketchDivider,
+  PartDrawing,
+} from "../illustrations/BenchSketches";
 import type { Mode } from "../types";
 import { TechnicalDrawing } from "../illustrations/TechnicalDrawing";
 export function Hero({ mode }: { mode: Mode }) {
@@ -13,12 +18,36 @@ export function Hero({ mode }: { mode: Mode }) {
     <section className="hero container" id="inicio">
       <div className="hero-topline mono">
         <span>
-          <span className="crosshair">✳</span> ELETRÔNICA DE PRECISÃO.
-          PERSONALIDADE DE OUTRO PLANETA.
+          <svg
+            className="crosshair"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"
+              stroke="currentColor"
+              strokeWidth="1.4"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="6"
+              stroke="currentColor"
+              strokeWidth="1"
+            />
+          </svg>{" "}
+          ELETRÔNICA DE PRECISÃO. PERSONALIDADE DE OUTRO PLANETA.
         </span>
         <span className="hero-coordinate">25°05′ S · 50°09′ W</span>
       </div>
       <div className="hero-grid">
+        <div className="notebook-binding" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+          <span className="mono">CADERNO DE BANCADA / UFO-042</span>
+        </div>
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="orange-dot" />
@@ -57,7 +86,7 @@ export function Hero({ mode }: { mode: Mode }) {
             </a>
             <span className="hand">
               {drone ? "a missão ainda não acabou." : "não compra outro ainda"}
-              <span className="hand-arrow">↙</span>
+              <PenArrow direction="left" className="hero-comment-arrow" />
             </span>
           </div>
           <div className="hero-trust">
@@ -70,6 +99,8 @@ export function Hero({ mode }: { mode: Mode }) {
           </div>
         </div>
         <div className="drawing-panel">
+          <span className="drawing-corner corner-a" aria-hidden="true" />
+          <span className="drawing-corner corner-b" aria-hidden="true" />
           <div className="drawing-label mono">
             <span>
               FIG. {drone ? "01" : "02"} /{" "}
@@ -78,6 +109,17 @@ export function Hero({ mode }: { mode: Mode }) {
             <ArrowUpRight size={17} />
           </div>
           <TechnicalDrawing mode={mode} />
+          <div className="hero-detail">
+            <PartDrawing kind={drone ? "gimbal" : "analog"} />
+            <span>
+              <span className="mono">
+                DETALHE {drone ? "01-A" : "02-A"} / SEM ESCALA
+              </span>
+              <span className="hand">
+                {drone ? "olhar de perto ↖" : "essa peça sai ↖"}
+              </span>
+            </span>
+          </div>
           <div className="drawing-footer mono">
             <span>DIAGNÓSTICO ANTES DE QUALQUER REPARO</span>
             <span className="drawing-stamp">
@@ -91,6 +133,7 @@ export function Hero({ mode }: { mode: Mode }) {
         </div>
       </div>
       <div className="hero-bottom mono">
+        <SketchDivider className="hero-ruler" />
         <span>UMA OFICINA. DOIS UNIVERSOS.</span>
         <span>
           DESÇA PARA EXPLORAR <ArrowDown size={14} />

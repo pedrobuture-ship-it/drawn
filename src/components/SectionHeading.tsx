@@ -1,3 +1,4 @@
+import { SketchDivider } from "../illustrations/BenchSketches";
 export function SectionHeading({
   code,
   title,
@@ -9,11 +10,14 @@ export function SectionHeading({
 }) {
   return (
     <div className="section-heading">
+      <SketchDivider className="section-ruler" />
       <div>
         <p className="section-code mono">
           <span>+</span> {code}
         </p>
-        <h2>{title}</h2>
+        <h2>
+          <span>{title}</span>
+        </h2>
       </div>
       {description && <p className="section-description">{description}</p>}
     </div>

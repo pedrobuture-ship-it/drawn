@@ -1,10 +1,5 @@
-import {
-  ArrowRight,
-  ClipboardCheck,
-  Package,
-  Search,
-  Wrench,
-} from "lucide-react";
+import { PenArrow, PenCheck } from "../illustrations/BenchSketches";
+import { ClipboardCheck, Package, Search, Wrench } from "lucide-react";
 import type { Mode } from "../types";
 import { SectionHeading } from "../components/SectionHeading";
 export function Process({ mode }: { mode: Mode }) {
@@ -47,9 +42,12 @@ export function Process({ mode }: { mode: Mode }) {
               <div className="step-top">
                 <span className="mono">WP-0{i + 1}</span>
                 <step.icon size={25} strokeWidth={1.3} />
-                {i < 3 && <ArrowRight className="step-arrow" size={20} />}
+                {i < 3 && <PenArrow className="step-connector" />}
               </div>
-              <h3>{step.title}</h3>
+              <h3>
+                <span>{step.title}</span>
+                {i === 3 && <PenCheck />}
+              </h3>
               <p>{step.text}</p>
               <span className="step-number" aria-hidden="true">
                 0{i + 1}

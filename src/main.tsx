@@ -11,6 +11,7 @@ import "@fontsource/caveat/latin-500.css";
 import "@fontsource/caveat/latin-600.css";
 import App from "./App";
 import "./styles.css";
+import "./art-direction.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

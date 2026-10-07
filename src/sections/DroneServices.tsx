@@ -1,22 +1,23 @@
-import {
-  ArrowUpRight,
-  Camera,
-  Cpu,
-  Fan,
-  Radar,
-  Wrench,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { PartDrawing } from "../illustrations/BenchSketches";
+import type { PartKind } from "../illustrations/BenchSketches";
 import { droneServices } from "../data/services";
 import { SectionHeading } from "../components/SectionHeading";
 import { whatsappUrl } from "../utils/whatsapp";
-const icons = {
-  camera: Camera,
-  cpu: Cpu,
-  fan: Fan,
-  radar: Radar,
-  wrench: Wrench,
+const drawings: Record<string, PartKind> = {
+  camera: "gimbal",
+  cpu: "board",
+  fan: "motor",
+  radar: "sensor",
+  wrench: "structure",
 };
+const notes = [
+  "gimbal → conferir",
+  "olhar de perto ↖",
+  "essa peça sai ↑",
+  "calibrar, depois testar",
+  "culpado nº 01?",
+];
 export function DroneServices() {
   return (
     <section id="servicos" className="services section-space container">
@@ -26,8 +27,7 @@ export function DroneServices() {
         description="Do diagnóstico ao último ajuste: cuidado técnico para o equipamento que leva você mais longe."
       />
       <div className="drone-service-grid">
-        {droneServices.map((service) => {
-          const Icon = icons[service.icon as keyof typeof icons];
+        {droneServices.map((service, i) => {
           return (
             <a
               className="service-card"
@@ -40,8 +40,12 @@ export function DroneServices() {
               aria-label={`Solicitar orçamento: ${service.fullTitle}`}
             >
               <div className="card-top">
-                <Icon className="service-icon" size={32} strokeWidth={1.3} />
+                <span className="mono">FICHA DE SERVIÇO</span>
                 <span className="mono">{service.code}</span>
+              </div>
+              <div className="service-specimen">
+                <PartDrawing kind={drawings[service.icon]} />
+                <span className="hand">{notes[i]}</span>
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>

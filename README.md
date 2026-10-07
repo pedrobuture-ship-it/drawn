@@ -25,7 +25,9 @@ O build está em `dist/` e pode ser servido em uma hospedagem estática.
 - `src/components/`: cabeçalho, marca e títulos das seções.
 - `src/illustrations/TechnicalDrawing.tsx`: drone, controle e UFO em SVG.
 - `src/utils/whatsapp.ts`: número de contato e montagem de mensagens com `encodeURIComponent`.
-- `src/styles.css`: identidade visual, responsividade e animações.
+- `src/styles.css`: estilos base, responsividade e animações.
+- `src/art-direction.css`: refinamento visual de caderno técnico, fichas de bancada e marcações de caneta.
+- `src/illustrations/BenchSketches.tsx`: desenhos de analógico, joystick TMR, placa, gimbal, motor e sensores; círculos, setas e divisores em SVG.
 
 Drones e Controles alternam sem recarregar a página. No modo Controles, escolha um console e um reparo, selecione opcionais e abra o WhatsApp com o resumo. Os adicionais e serviços de drones são sob consulta. O site prepara a mensagem; o visitante confirma o envio no WhatsApp.
 

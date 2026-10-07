@@ -10,16 +10,13 @@ export function Ufo({ className = "" }: { className?: string }) {
       aria-hidden="true"
     >
       <path
-        d="M23 25C23 6 53 6 53 25"
+        d="M23 25C21 7 51 5 53 25"
         fill="var(--orange)"
         stroke="currentColor"
         strokeWidth="2"
       />
-      <ellipse
-        cx="38"
-        cy="29"
-        rx="32"
-        ry="10"
+      <path
+        d="M6 28C8 16 65 17 70 28c4 15-62 15-64 0Z"
         stroke="currentColor"
         strokeWidth="2"
         fill="var(--paper)"
@@ -227,9 +224,9 @@ export function TechnicalDrawing({ mode }: { mode: Mode }) {
           ? "Desenho técnico de um drone com anotações de reparo de hélice, motor e gimbal"
           : "Desenho técnico de controle com o analógico circulado e anotações de diagnóstico"
       }
-      initial={reduce ? false : { opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
+      initial={reduce ? false : { opacity: 0, x: 12, rotate: -1.4 }}
+      animate={{ opacity: 1, x: 0, rotate: 0 }}
+      transition={{ duration: 0.38, ease: "easeOut" }}
     >
       {mode === "drones" ? <Drone /> : <Controller />}
     </motion.svg>

@@ -1,3 +1,4 @@
+import { PartDrawing, PenArrow } from "../illustrations/BenchSketches";
 import { BadgeCheck, CircuitBoard, Cpu } from "lucide-react";
 import type { Mode } from "../types";
 import { SectionHeading } from "../components/SectionHeading";
@@ -43,6 +44,9 @@ export function Specialists({ mode }: { mode: Mode }) {
         {specialists.map((person) => (
           <article className="specialist" key={person.initials}>
             <div className="specialist-header">
+              <span className="person-record mono">
+                REGISTRO / {person.initials}-01
+              </span>
               <div className="initials">
                 {person.initials}
                 <person.icon size={17} />
@@ -59,7 +63,13 @@ export function Specialists({ mode }: { mode: Mode }) {
                 <li key={s}>{s}</li>
               ))}
             </ul>
-            <p className="hand specialist-note">{person.note}</p>
+            <div className="specialist-bench-note">
+              <PartDrawing kind="board" />
+              <p className="hand specialist-note">
+                {person.note}
+                <PenArrow direction="left" />
+              </p>
+            </div>
           </article>
         ))}
       </div>

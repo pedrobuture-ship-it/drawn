@@ -1,65 +1,74 @@
-import { motion } from "framer-motion";
-import { Check, ScanLine } from "lucide-react";
 import type { Mode } from "../types";
 import { Ufo } from "../illustrations/TechnicalDrawing";
+import { PenCheck, PenCircle, PenArrow } from "../illustrations/BenchSketches";
+
 export function Report({ mode }: { mode: Mode }) {
   const drone = mode === "drones";
   const fields = drone
     ? [
         ["OBJETO VOADOR", "IDENTIFICADO"],
-        ["DRONE ABDUZIDO", "DEVOLVIDO INTEIRO"],
-        ["DRONE COM DEFEITO", "EM REPARO"],
+        ["GIMBAL", "VERIFICADO"],
+        ["MOTORES", "TESTADOS"],
+        ["GPS / IMU", "CALIBRADOS"],
       ]
     : [
         ["CONTROLADOR", "IDENTIFICADO"],
-        ["ANALÓGICOS", "CALIBRADOS"],
+        ["ANALÓGICO", "CALIBRADO"],
         ["BOTÕES", "TESTADOS"],
         ["PLACA", "REVISADA"],
       ];
   return (
     <section className="report">
       <div className="container">
-        <div className="report-heading mono">
-          <span>
-            <ScanLine size={16} /> RELATÓRIO DE OCORRÊNCIA // UFO-042
-          </span>
-          <span>PROTOCOLO DE BANCADA</span>
-        </div>
-        <div className={`report-grid ${drone ? "" : "report-controls"}`}>
-          {fields.map(([label, value], i) => (
-            <motion.div
-              className="report-field"
-              key={label}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.07, duration: 0.25 }}
-            >
-              <span className="mono">{label}</span>
-              <strong>
-                {value} <Check size={17} />
-              </strong>
-            </motion.div>
-          ))}
-          <div className="report-field report-mission">
-            <span className="mono">MISSÃO</span>
-            <strong>
-              {drone ? "DE VOLTA AO CÉU." : "DEVOLVER SUA PRECISÃO."}
-            </strong>
+        <div className="report-sheet">
+          <div className="report-heading mono">
+            <span>RELATÓRIO DE OCORRÊNCIA // UFO-042</span>
+            <span className="report-index">FICHA 042 / REV. A</span>
           </div>
-        </div>
-        <div className="report-note">
-          <span className="mono">
-            {drone
-              ? "COLOCAR SEU DRONE DE VOLTA AO CÉU"
-              : "PRECISÃO NA BANCADA. PRECISÃO NO JOGO."}
-          </span>
-          <span className="hand">
-            {drone
-              ? "abduzimos apenas os problemas."
-              : "para deixar bem claro: abduzimos apenas os problemas."}{" "}
+          <div className="report-layout">
+            <div className="report-register">
+              <p className="report-register-label mono">
+                COMPONENTE <span>VERIFICAÇÃO</span>
+              </p>
+              <div className="report-rows" key={mode}>
+                {fields.map(([label, value]) => (
+                  <div className="report-row" key={label}>
+                    <span className="mono">{label}</span>
+                    <span className="report-leader" aria-hidden="true" />
+                    <strong>{value}</strong>
+                    <PenCheck />
+                  </div>
+                ))}
+              </div>
+              <p className="report-protocol mono">
+                PROTOCOLO DE BANCADA · INSPEÇÃO / REPARO / TESTE
+              </p>
+            </div>
+            <div className="report-mission">
+              <span className="mono">MISSÃO:</span>
+              <strong>
+                {drone
+                  ? "COLOCAR SEU DRONE\nDE VOLTA AO CÉU"
+                  : "DEVOLVER\nSUA PRECISÃO"}
+              </strong>
+              <span className="report-approved hand">
+                <PenCircle />
+                testado <PenCheck />
+              </span>
+              <span className="report-mission-code mono">
+                UFO-042 / {drone ? "DR" : "CT"}
+              </span>
+            </div>
+          </div>
+          <div className="report-note">
+            <span className="hand">
+              {drone
+                ? "abduzimos apenas os problemas."
+                : "para deixar bem claro: abduzimos apenas os problemas."}
+              <PenArrow direction="right" />
+            </span>
             <Ufo />
-          </span>
+          </div>
         </div>
       </div>
     </section>

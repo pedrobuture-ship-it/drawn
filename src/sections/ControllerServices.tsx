@@ -1,3 +1,8 @@
+import {
+  PartDrawing,
+  PenCircle,
+  PenArrow,
+} from "../illustrations/BenchSketches";
 import { useMemo, useState } from "react";
 import { flushSync } from "react-dom";
 import { usePageTool } from "../hooks/usePageTool";
@@ -162,14 +167,35 @@ export function ControllerServices() {
                 <span>RP-0{i + 1}</span>
                 <span>{plan.tier.toUpperCase()}</span>
               </div>
-              <div className="plan-price">
-                <span>R$</span>
-                <strong>{plan.price}</strong>
+              <div className="plan-specimen">
+                <div className="plan-price">
+                  <PenCircle />
+                  <span>R$</span>
+                  <strong>{plan.price}</strong>
+                </div>
+                <div className="plan-component">
+                  <PartDrawing
+                    kind={plan.tier === "Padrão" ? "analog" : "tmr"}
+                  />
+                  <span className="mono">
+                    {plan.tier === "Padrão" ? "ANALÓGICO" : "JOYSTICK TMR"}
+                  </span>
+                </div>
               </div>
-              <h3>{plan.part}</h3>
+              <h3 className="part-name">
+                <span>{plan.part}</span>
+                <span className="part-note hand">
+                  {plan.tier === "Padrão" ? "essa peça sai" : "essa entra ↑"}
+                  <PenArrow direction="up" />
+                </span>
+              </h3>
               <p className="plan-warranty">
-                <ShieldCheck size={17} />
-                {plan.warranty}
+                <span className="warranty-caption mono">GARANTIA</span>
+                <span className="warranty-value">
+                  <ShieldCheck size={17} />
+                  {plan.warranty}
+                  {plan.tier !== "Padrão" && <PenCircle />}
+                </span>
               </p>
               <ul>
                 {plan.features.map((f) => (
@@ -179,7 +205,10 @@ export function ControllerServices() {
                   </li>
                 ))}
               </ul>
-              <span className="hand plan-note">{plan.note}</span>
+              <span className="hand plan-note">
+                {plan.note}
+                {plan.recommended && <PenArrow direction="up" />}
+              </span>
               <button
                 className={`button ${plan.recommended ? "button-dark" : ""}`}
                 onClick={() => selectPlan(plan)}
