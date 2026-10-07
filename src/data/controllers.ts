@@ -19,14 +19,14 @@ const advanced = (
   part,
   warranty,
   features: ["Tecnologia TMR", "Calibração e teste"],
-  note: "← eu iria nesse",
+  note: "eu iria nesse",
   recommended: true,
 });
 const premium = (xbox = false): RepairPlan => ({
   tier: "Premium",
   price: 150,
   part: "Joystick TMR K-Silver JS13 Pro+",
-  warranty: xbox ? "1 ano de garantia" : "1 ano de garantia + máxima precisão",
+  warranty: "1 ano de garantia contra drift",
   features: xbox
     ? ["Padrão Elite", "Alta precisão", "Calibração e teste"]
     : ["Tecnologia TMR", "Máxima precisão", "Calibração e teste"],

@@ -55,7 +55,7 @@ export function RepairCard({
               showDirectionArrow={false}
             />
             <SketchAnnotation
-              text={plan.tier === "Padrão" ? "essa peça sai" : "essa entra ↑"}
+              text={plan.tier === "Padrão" ? "essa entra" : "essa entra ↑"}
               direction="up-right"
               className="part-note"
             />
@@ -86,11 +86,7 @@ export function RepairCard({
       </ul>
       {plan.recommended ? (
         <div className="repair-action-wrapper">
-          <SketchAnnotation
-            text={plan.note}
-            direction="down-left"
-            className="plan-note recommended-note"
-          />
+          <span className="hand plan-note recommended-note">{plan.note}</span>
           {selectButton}
         </div>
       ) : (

@@ -47,14 +47,14 @@
             "Tecnologia TMR",
             "Calibração e teste"
           ],
-          "note": "← eu iria nesse",
+          "note": "eu iria nesse",
           "recommended": true
         },
         {
           "tier": "Premium",
           "price": 150,
           "part": "Joystick TMR K-Silver JS13 Pro+",
-          "warranty": "1 ano de garantia + máxima precisão",
+          "warranty": "1 ano de garantia contra drift",
           "features": [
             "Tecnologia TMR",
             "Máxima precisão",
@@ -89,7 +89,7 @@
             "Tecnologia TMR",
             "Calibração e teste"
           ],
-          "note": "← eu iria nesse",
+          "note": "eu iria nesse",
           "recommended": true
         }
       ]
@@ -119,14 +119,14 @@
             "Tecnologia TMR",
             "Calibração e teste"
           ],
-          "note": "← eu iria nesse",
+          "note": "eu iria nesse",
           "recommended": true
         },
         {
           "tier": "Premium",
           "price": 150,
           "part": "Joystick TMR K-Silver JS13 Pro+",
-          "warranty": "1 ano de garantia",
+          "warranty": "1 ano de garantia contra drift",
           "features": [
             "Padrão Elite",
             "Alta precisão",
@@ -161,7 +161,7 @@
             "Tecnologia TMR",
             "Calibração e teste"
           ],
-          "note": "← eu iria nesse",
+          "note": "eu iria nesse",
           "recommended": true
         }
       ]

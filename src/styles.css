@@ -2465,12 +2465,6 @@ body {
   width: fit-content;
   margin-top: 0;
 }
-.recommended-note > .annotation-arrow {
-  width: 30px;
-  height: 25px;
-  left: 12px;
-  top: calc(100% - 14px);
-}
 .plan-warranty {
   display: flex;
   flex-direction: column;
@@ -3435,9 +3429,6 @@ body {
   .plan-note {
     margin-bottom: 23px;
     font-size: 28px;
-  }
-  .recommended-note > .annotation-arrow {
-    top: calc(100% - 9px);
   }
   .warranty-value {
     font-size: 13px;
