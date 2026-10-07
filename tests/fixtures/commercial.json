@@ -1,0 +1,207 @@
+{
+  "additionalRepairs": [
+    {
+      "name": "Troca de Botões",
+      "description": "R1, R2, L1, L2, D-Pad"
+    },
+    {
+      "name": "Reparo na Porta USB-C",
+      "description": "Não carrega ou está solta"
+    },
+    {
+      "name": "Reparo de Placa Mãe",
+      "description": "Não liga / desconecta"
+    },
+    {
+      "name": "Troca de Carcaça",
+      "description": "Carcaça quebrada ou personalizada"
+    },
+    {
+      "name": "Troca de Bateria",
+      "description": "Não segura carga"
+    }
+  ],
+  "consoles": [
+    {
+      "id": "ps5",
+      "label": "PLAYSTATION 5",
+      "name": "PlayStation 5",
+      "plans": [
+        {
+          "tier": "Padrão",
+          "price": 80,
+          "part": "Joystick Alps Original",
+          "warranty": "Sem garantia contra drift futuro.",
+          "features": [
+            "Substituição do analógico",
+            "Calibração e teste"
+          ],
+          "note": "resolve, mas pode voltar"
+        },
+        {
+          "tier": "Avançado",
+          "price": 110,
+          "part": "Joystick TMR Ginfull R313",
+          "warranty": "1 ano de garantia contra drift",
+          "features": [
+            "Tecnologia TMR",
+            "Calibração e teste"
+          ],
+          "note": "← eu iria nesse",
+          "recommended": true
+        },
+        {
+          "tier": "Premium",
+          "price": 150,
+          "part": "Joystick TMR K-Silver JS13 Pro+",
+          "warranty": "1 ano de garantia + máxima precisão",
+          "features": [
+            "Tecnologia TMR",
+            "Máxima precisão",
+            "Calibração e teste"
+          ],
+          "note": "precisão máxima ↑"
+        }
+      ]
+    },
+    {
+      "id": "ps4",
+      "label": "PLAYSTATION 4",
+      "name": "PlayStation 4",
+      "plans": [
+        {
+          "tier": "Padrão",
+          "price": 80,
+          "part": "Joystick Alps Original",
+          "warranty": "Sem garantia",
+          "features": [
+            "Substituição do analógico",
+            "Calibração e teste"
+          ],
+          "note": "resolve, mas pode voltar"
+        },
+        {
+          "tier": "Avançado",
+          "price": 110,
+          "part": "Joystick TMR K-Silver JS13 Pro+",
+          "warranty": "1 ano de garantia contra drift",
+          "features": [
+            "Tecnologia TMR",
+            "Calibração e teste"
+          ],
+          "note": "← eu iria nesse",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "id": "xbox",
+      "label": "XBOX SERIES / ONE",
+      "name": "Xbox Series S/X e One",
+      "plans": [
+        {
+          "tier": "Padrão",
+          "price": 80,
+          "part": "Joystick Alps Original",
+          "warranty": "Sem garantia",
+          "features": [
+            "Substituição do analógico",
+            "Calibração e teste"
+          ],
+          "note": "resolve, mas pode voltar"
+        },
+        {
+          "tier": "Avançado",
+          "price": 110,
+          "part": "Joystick TMR Ginfull R313",
+          "warranty": "1 ano de garantia contra drift",
+          "features": [
+            "Tecnologia TMR",
+            "Calibração e teste"
+          ],
+          "note": "← eu iria nesse",
+          "recommended": true
+        },
+        {
+          "tier": "Premium",
+          "price": 150,
+          "part": "Joystick TMR K-Silver JS13 Pro+",
+          "warranty": "1 ano de garantia",
+          "features": [
+            "Padrão Elite",
+            "Alta precisão",
+            "Calibração e teste"
+          ],
+          "note": "precisão máxima ↑"
+        }
+      ]
+    },
+    {
+      "id": "xbox360",
+      "label": "XBOX 360",
+      "name": "Xbox 360",
+      "plans": [
+        {
+          "tier": "Padrão",
+          "price": 80,
+          "part": "Joystick Alps Original",
+          "warranty": "Sem garantia",
+          "features": [
+            "Substituição do analógico",
+            "Calibração e teste"
+          ],
+          "note": "resolve, mas pode voltar"
+        },
+        {
+          "tier": "Avançado",
+          "price": 110,
+          "part": "Joystick TMR",
+          "warranty": "1 ano contra drift",
+          "features": [
+            "Tecnologia TMR",
+            "Calibração e teste"
+          ],
+          "note": "← eu iria nesse",
+          "recommended": true
+        }
+      ]
+    }
+  ],
+  "droneServices": [
+    {
+      "code": "DR-01",
+      "title": "Gimbal & câmera",
+      "fullTitle": "Troca de Gimbal e Câmera",
+      "description": "Substituição e calibração de gimbal, lente e sensor.",
+      "icon": "camera"
+    },
+    {
+      "code": "DR-02",
+      "title": "Placas & eletrônica",
+      "fullTitle": "Manutenção e Reparo de Placas",
+      "description": "Diagnóstico de curto-circuito, solda e reparo de placa controladora.",
+      "icon": "cpu"
+    },
+    {
+      "code": "DR-03",
+      "title": "Motores & hélices",
+      "fullTitle": "Substituição de Motores e Hélices",
+      "description": "Troca de motores e balanceamento.",
+      "icon": "fan"
+    },
+    {
+      "code": "DR-04",
+      "title": "Sensores & GPS",
+      "fullTitle": "Calibração de Sensores e GPS",
+      "description": "Ajuste de bússola, IMU e GPS.",
+      "icon": "radar"
+    },
+    {
+      "code": "DR-05",
+      "title": "Preventiva & pós-queda",
+      "fullTitle": "Manutenção Preventiva e Pós-Queda",
+      "description": "Revisão de estrutura e componentes.",
+      "icon": "wrench"
+    }
+  ]
+}

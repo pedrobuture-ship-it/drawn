@@ -1,4 +1,4 @@
-import { PenArrow, PenCheck } from "../illustrations/BenchSketches";
+import { ProcessStep } from "../components/ProcessStep";
 import { ClipboardCheck, Package, Search, Wrench } from "lucide-react";
 import type { Mode } from "../types";
 import { SectionHeading } from "../components/SectionHeading";
@@ -29,7 +29,7 @@ export function Process({ mode }: { mode: Mode }) {
     },
   ];
   return (
-    <section id="processo" className="process-section">
+    <section tabIndex={-1} id="processo" className="process-section">
       <div className="container section-space">
         <SectionHeading
           code="02 / PROTOCOLO DE REPARO"
@@ -38,21 +38,7 @@ export function Process({ mode }: { mode: Mode }) {
         />
         <div className="process-grid">
           {steps.map((step, i) => (
-            <article className="process-step" key={step.title}>
-              <div className="step-top">
-                <span className="mono">WP-0{i + 1}</span>
-                <step.icon size={25} strokeWidth={1.3} />
-                {i < 3 && <PenArrow className="step-connector" />}
-              </div>
-              <h3>
-                <span>{step.title}</span>
-                {i === 3 && <PenCheck />}
-              </h3>
-              <p>{step.text}</p>
-              <span className="step-number" aria-hidden="true">
-                0{i + 1}
-              </span>
-            </article>
+            <ProcessStep step={step} index={i} key={step.title} />
           ))}
         </div>
         <p className="hand process-note">

@@ -1,7 +1,7 @@
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { PartDrawing } from "../illustrations/BenchSketches";
 import type { PartKind } from "../illustrations/BenchSketches";
-import { droneServices } from "../data/services";
+import { droneServices } from "../data/droneServices";
 import { SectionHeading } from "../components/SectionHeading";
 import { whatsappUrl } from "../utils/whatsapp";
 const drawings: Record<string, PartKind> = {
@@ -20,7 +20,11 @@ const notes = [
 ];
 export function DroneServices() {
   return (
-    <section id="servicos" className="services section-space container">
+    <section
+      tabIndex={-1}
+      id="servicos"
+      className="services section-space container"
+    >
       <SectionHeading
         code="01 / SERVIÇOS PARA DRONES"
         title="Cada peça importa. Cada voo também."
@@ -51,7 +55,7 @@ export function DroneServices() {
               <p>{service.description}</p>
               <div className="card-bottom mono">
                 <span>SOB CONSULTA</span>
-                <ArrowUpRight size={20} />
+                <ArrowUpRight size={20} aria-hidden="true" />
               </div>
             </a>
           );
@@ -94,8 +98,8 @@ export function DroneServices() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <MessageCircle size={17} /> ENVIAR DIAGNÓSTICO{" "}
-          <ArrowUpRight size={17} />
+          <MessageCircle size={17} aria-hidden="true" /> ENVIAR DIAGNÓSTICO{" "}
+          <ArrowUpRight size={17} aria-hidden="true" />
         </a>
       </div>
     </section>

@@ -4,10 +4,21 @@ Site responsivo em React, TypeScript e Vite, com Tailwind CSS, Framer Motion e L
 
 ## Executar
 
+Use Node.js 20.19+ da linha 20 ou Node.js 22.12+.
+
 ```bash
-npm ci
+npm install
 npm run dev
 ```
+
+## Verificação
+
+```bash
+npm test
+npm audit
+```
+
+Os testes protegem os dados comerciais originais e validam as mensagens dos dez planos, incluindo adicionais e codificação de caracteres.
 
 ## Produção
 
@@ -20,15 +31,26 @@ O build está em `dist/` e pode ser servido em uma hospedagem estática.
 
 ## Conteúdo e organização
 
-- `src/data/services.ts`: consoles, peças, preços, garantias, opcionais e serviços de drones.
+- `src/data/controllers.ts`: consoles, peças, preços, garantias e adicionais.
+- `src/data/droneServices.ts`: serviços e descrições de drones.
+- `src/data/team.ts`: equipe, qualificações e competências por modo.
+- `src/data/business.ts`: telefone, localização, horários e URL oficial.
 - `src/sections/`: hero, relatório, serviços, processo, especialistas e contato.
-- `src/components/`: cabeçalho, marca e títulos das seções.
+- `src/components/`: marca, navegação, seletor de modo, tabs, fichas de reparo, equipe, etapas e atalhos de WhatsApp.
+- `src/context/RepairQuote.tsx`: ficha compartilhada pelos atalhos de contato.
 - `src/illustrations/TechnicalDrawing.tsx`: drone, controle e UFO em SVG.
-- `src/utils/whatsapp.ts`: número de contato e montagem de mensagens com `encodeURIComponent`.
-- `src/styles.css`: estilos base, responsividade e animações.
-- `src/art-direction.css`: refinamento visual de caderno técnico, fichas de bancada e marcações de caneta.
+- `src/utils/whatsapp.ts`: montagem de mensagens e URLs com `encodeURIComponent`.
+- `src/styles.css`: sistema visual de caderno técnico, responsividade, estados de foco e movimento reduzido.
 - `src/illustrations/BenchSketches.tsx`: desenhos de analógico, joystick TMR, placa, gimbal, motor e sensores; círculos, setas e divisores em SVG.
 
 Drones e Controles alternam sem recarregar a página. No modo Controles, escolha um console e um reparo, selecione opcionais e abra o WhatsApp com o resumo. Os adicionais e serviços de drones são sob consulta. O site prepara a mensagem; o visitante confirma o envio no WhatsApp.
 
 O processo de diagnóstico, orçamento aprovado e reparo é executado pela oficina. O site não recebe pagamentos ou registra pedidos em um servidor.
+
+## Metadados e hospedagem
+
+`index.html` contém title, description, Open Graph, favicon e theme-color. O plugin em `vite.config.ts` inclui canonical e JSON-LD de LocalBusiness no HTML servido em desenvolvimento e no build. A URL vem de `src/data/business.ts`; ajuste esse campo se a hospedagem oficial mudar.
+
+O projeto existente usa Sites, configurado em `.openai/hosting.json`. A versão de revisão continua com o acesso privado já configurado.
+
+A revisão técnica e visual está registrada em [PRODUCTION_REVIEW.md](PRODUCTION_REVIEW.md).

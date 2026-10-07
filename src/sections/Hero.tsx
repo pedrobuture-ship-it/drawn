@@ -11,11 +11,12 @@ import {
   PartDrawing,
 } from "../illustrations/BenchSketches";
 import type { Mode } from "../types";
+import { business } from "../data/business";
 import { TechnicalDrawing } from "../illustrations/TechnicalDrawing";
 export function Hero({ mode }: { mode: Mode }) {
   const drone = mode === "drones";
   return (
-    <section className="hero container" id="inicio">
+    <section tabIndex={-1} className="hero container" id="inicio">
       <div className="hero-topline mono">
         <span>
           <svg
@@ -82,7 +83,7 @@ export function Hero({ mode }: { mode: Mode }) {
           </p>
           <div className="hero-cta">
             <a className="button button-dark" href="#servicos">
-              VER SERVIÇOS <ArrowDown size={17} />
+              VER SERVIÇOS <ArrowDown size={17} aria-hidden="true" />
             </a>
             <span className="hand">
               {drone ? "a missão ainda não acabou." : "não compra outro ainda"}
@@ -91,10 +92,10 @@ export function Hero({ mode }: { mode: Mode }) {
           </div>
           <div className="hero-trust">
             <span>
-              <MapPin size={15} /> Ponta Grossa, PR
+              <MapPin size={15} aria-hidden="true" /> {business.city}
             </span>
             <span>
-              <Wrench size={15} /> Reparo especializado
+              <Wrench size={15} aria-hidden="true" /> Reparo especializado
             </span>
           </div>
         </div>
@@ -106,7 +107,7 @@ export function Hero({ mode }: { mode: Mode }) {
               FIG. {drone ? "01" : "02"} /{" "}
               {drone ? "OBJETO VOADOR" : "CONTROLADOR"}
             </span>
-            <ArrowUpRight size={17} />
+            <ArrowUpRight size={17} aria-hidden="true" />
           </div>
           <TechnicalDrawing mode={mode} />
           <div className="hero-detail">
@@ -127,7 +128,7 @@ export function Hero({ mode }: { mode: Mode }) {
               <br />
               REPARAR
               <br />
-              TESTAR <ShieldCheck size={13} />
+              TESTAR <ShieldCheck size={13} aria-hidden="true" />
             </span>
           </div>
         </div>
@@ -136,7 +137,7 @@ export function Hero({ mode }: { mode: Mode }) {
         <SketchDivider className="hero-ruler" />
         <span>UMA OFICINA. DOIS UNIVERSOS.</span>
         <span>
-          DESÇA PARA EXPLORAR <ArrowDown size={14} />
+          DESÇA PARA EXPLORAR <ArrowDown size={14} aria-hidden="true" />
         </span>
       </div>
     </section>

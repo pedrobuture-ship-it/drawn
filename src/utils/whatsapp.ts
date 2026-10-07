@@ -1,6 +1,7 @@
 import type { RepairPlan } from "../types";
+import { business } from "../data/business";
 export const whatsappUrl = (message: string) =>
-  `https://wa.me/5542998083069?text=${encodeURIComponent(message)}`;
+  `https://wa.me/${business.phone}?text=${encodeURIComponent(message)}`;
 export function planMessage(
   consoleName: string,
   plan: RepairPlan,

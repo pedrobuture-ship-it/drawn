@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 export type PartKind =
   "analog" | "tmr" | "board" | "gimbal" | "motor" | "sensor" | "structure";
@@ -286,14 +286,14 @@ export function SketchDivider({ className = "" }: { className?: string }) {
       fill="none"
       aria-hidden="true"
     >
-      <motion.path
+      <m.path
         d="M2 9C116 6 175 11 268 8S459 11 566 8 749 7 847 9s107-2 150-1"
         stroke="currentColor"
         strokeWidth="1"
         initial={reduce ? false : { pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: reduce ? 0 : 0.6 }}
       />
       <path
         d="m4 3 1 11m245-9-1 8m254-11 1 12m248-10-1 10m242-10 1 12M41 11q133-5 183-1"
@@ -313,7 +313,7 @@ export function PenCheck({ className = "" }: { className?: string }) {
       fill="none"
       aria-hidden="true"
     >
-      <motion.path
+      <m.path
         d="m4 12 6 8C17 12 23 6 28 3M5 12l6 7"
         stroke="currentColor"
         strokeWidth="2"
@@ -322,7 +322,7 @@ export function PenCheck({ className = "" }: { className?: string }) {
         initial={reduce ? false : { pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.45 }}
+        transition={{ duration: reduce ? 0 : 0.45 }}
       />
     </svg>
   );

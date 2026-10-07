@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { flushSync } from "react-dom";
 import { usePageTool } from "./hooks/usePageTool";
-import { MotionConfig } from "framer-motion";
+import { LazyMotion, domAnimation, MotionConfig } from "framer-motion";
 import type { Mode } from "./types";
 import { Header } from "./components/Header";
 import { Hero } from "./sections/Hero";
@@ -11,6 +11,8 @@ import { ControllerServices } from "./sections/ControllerServices";
 import { Process } from "./sections/Process";
 import { Specialists } from "./sections/Specialists";
 import { Contact } from "./sections/Contact";
+import { Footer } from "./components/Footer";
+import { RepairQuoteProvider } from "./context/RepairQuote";
 export default function App() {
   const [mode, setMode] = useState<Mode>("drones");
   const modeTool = useMemo(
@@ -38,19 +40,24 @@ export default function App() {
   );
   usePageTool(modeTool);
   return (
-    <MotionConfig reducedMotion="user">
-      <a href="#conteudo" className="skip-link">
-        Pular para o conteúdo
-      </a>
-      <Header mode={mode} onModeChange={setMode} />
-      <main id="conteudo">
-        <Hero mode={mode} />
-        <Report mode={mode} />
-        {mode === "drones" ? <DroneServices /> : <ControllerServices />}
-        <Process mode={mode} />
-        <Specialists mode={mode} />
-        <Contact mode={mode} />
-      </main>
-    </MotionConfig>
+    <RepairQuoteProvider>
+      <LazyMotion features={domAnimation} strict>
+        <MotionConfig reducedMotion="user">
+          <a href="#conteudo" className="skip-link">
+            Pular para o conteúdo
+          </a>
+          <Header mode={mode} onModeChange={setMode} />
+          <main id="conteudo" tabIndex={-1}>
+            <Hero mode={mode} />
+            <Report mode={mode} />
+            {mode === "drones" ? <DroneServices /> : <ControllerServices />}
+            <Process mode={mode} />
+            <Specialists mode={mode} />
+            <Contact mode={mode} />
+          </main>
+          <Footer mode={mode} />
+        </MotionConfig>
+      </LazyMotion>
+    </RepairQuoteProvider>
   );
 }

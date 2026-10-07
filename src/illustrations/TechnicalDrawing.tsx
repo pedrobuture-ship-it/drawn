@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import type { Mode } from "../types";
 
 export function Ufo({ className = "" }: { className?: string }) {
@@ -214,7 +214,7 @@ function Controller() {
 export function TechnicalDrawing({ mode }: { mode: Mode }) {
   const reduce = useReducedMotion();
   return (
-    <motion.svg
+    <m.svg
       key={mode}
       className="technical-drawing"
       viewBox="0 0 600 470"
@@ -226,9 +226,9 @@ export function TechnicalDrawing({ mode }: { mode: Mode }) {
       }
       initial={reduce ? false : { opacity: 0, x: 12, rotate: -1.4 }}
       animate={{ opacity: 1, x: 0, rotate: 0 }}
-      transition={{ duration: 0.38, ease: "easeOut" }}
+      transition={{ duration: reduce ? 0 : 0.38, ease: "easeOut" }}
     >
       {mode === "drones" ? <Drone /> : <Controller />}
-    </motion.svg>
+    </m.svg>
   );
 }

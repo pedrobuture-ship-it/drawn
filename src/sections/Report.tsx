@@ -22,7 +22,7 @@ export function Report({ mode }: { mode: Mode }) {
       <div className="container">
         <div className="report-sheet">
           <div className="report-heading mono">
-            <span>RELATÓRIO DE OCORRÊNCIA // UFO-042</span>
+            <h2>RELATÓRIO DE OCORRÊNCIA // UFO-042</h2>
             <span className="report-index">FICHA 042 / REV. A</span>
           </div>
           <div className="report-layout">
@@ -30,16 +30,16 @@ export function Report({ mode }: { mode: Mode }) {
               <p className="report-register-label mono">
                 COMPONENTE <span>VERIFICAÇÃO</span>
               </p>
-              <div className="report-rows" key={mode}>
+              <dl className="report-rows" key={mode}>
                 {fields.map(([label, value]) => (
                   <div className="report-row" key={label}>
-                    <span className="mono">{label}</span>
+                    <dt className="mono">{label}</dt>
                     <span className="report-leader" aria-hidden="true" />
-                    <strong>{value}</strong>
+                    <dd>{value}</dd>
                     <PenCheck />
                   </div>
                 ))}
-              </div>
+              </dl>
               <p className="report-protocol mono">
                 PROTOCOLO DE BANCADA · INSPEÇÃO / REPARO / TESTE
               </p>

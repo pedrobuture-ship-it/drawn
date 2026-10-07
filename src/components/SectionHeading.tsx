@@ -13,7 +13,7 @@ export function SectionHeading({
       <SketchDivider className="section-ruler" />
       <div>
         <p className="section-code mono">
-          <span>+</span> {code}
+          <span aria-hidden="true">+</span> {code}
         </p>
         <h2>
           <span>{title}</span>
