@@ -1818,24 +1818,35 @@ body {
   max-width: 385px;
 }
 .hero-cta {
-  gap: 29px;
+  --hero-cta-gap: 29px;
+  gap: var(--hero-cta-gap);
   position: relative;
   margin-top: 33px;
 }
 .hero-cta .hand {
+  display: block;
   font-size: 25px;
   max-width: 175px;
   padding: 2px 0 17px;
   line-height: 1.02;
   transform: rotate(-6deg);
 }
+.hero-cta-note {
+  position: relative;
+  max-width: 175px;
+  min-width: 0;
+}
 .hero-comment-arrow {
   position: absolute;
-  top: 33px;
-  left: -30px;
-  width: 91px;
-  height: 34px;
-  transform: rotate(-4deg);
+  top: calc(50% - 20px);
+  right: calc(100% + 3px);
+  width: calc(var(--hero-cta-gap) - 6px);
+  height: 22px;
+  color: #a14725;
+  pointer-events: none;
+}
+.hero-arrow-stacked {
+  display: none;
 }
 .hero-trust {
   margin-top: 47px;
@@ -2578,8 +2589,9 @@ body {
   transform: rotate(0.12deg);
 }
 .process-grid {
+  --process-gap: 31px;
   border: 0;
-  gap: 31px;
+  gap: var(--process-gap);
   position: relative;
   overflow: visible;
 }
@@ -2589,8 +2601,16 @@ body {
   overflow: visible;
 }
 .step-top {
+  display: grid;
+  grid-template-columns: auto 21px minmax(0, 1fr);
   justify-content: flex-start;
   gap: 24px;
+}
+.step-link {
+  position: relative;
+  min-width: 0;
+  height: 28px;
+  pointer-events: none;
 }
 .step-top > .mono {
   border: 1px solid #9b927e;
@@ -2612,12 +2632,12 @@ body {
 }
 .step-connector {
   position: absolute;
-  top: 2px;
-  right: -37px;
-  width: 80px;
-  height: 35px;
+  top: 0;
+  left: -12px;
+  width: calc(100% + var(--process-gap) + 8px);
+  height: 28px;
   color: #8f816c;
-  transform: rotate(-7deg);
+  pointer-events: none;
 }
 .process-step h3 {
   position: relative;
@@ -2857,7 +2877,7 @@ body {
     font-size: 12px;
   }
   .hero-cta {
-    gap: 19px;
+    --hero-cta-gap: 19px;
   }
   .hero-cta .hand {
     font-size: 22px;
@@ -2934,11 +2954,7 @@ body {
     font-size: 12px;
   }
   .process-grid {
-    gap: 24px;
-  }
-  .step-connector {
-    right: -28px;
-    width: 60px;
+    --process-gap: 24px;
   }
   .specialist {
     padding-inline: 23px;
@@ -2964,11 +2980,28 @@ body {
   .hero-cta {
     flex-direction: column;
     align-items: flex-start;
-    gap: 17px;
+    --hero-cta-gap: 17px;
+  }
+  .hero-cta-note {
+    align-self: flex-start;
+    margin-left: 24px;
   }
   .hero-cta .hand {
-    align-self: flex-end;
-    margin-right: 15px;
+    transform: rotate(-3deg);
+  }
+  .hero-comment-arrow {
+    top: auto;
+    right: auto;
+    left: 12px;
+    bottom: calc(100% + 3px);
+    width: 24px;
+    height: calc(var(--hero-cta-gap) - 4px);
+  }
+  .hero-arrow-inline {
+    display: none;
+  }
+  .hero-arrow-stacked {
+    display: block;
   }
   .hero-trust {
     margin-top: 33px;
@@ -3077,14 +3110,11 @@ body {
     margin-inline: auto;
   }
   .process-grid {
+    --process-gap: 40px;
     gap: 26px 40px;
   }
   .process-step:nth-child(n + 3) {
     border: 0;
-  }
-  .step-connector {
-    right: -36px;
-    width: 80px;
   }
   .process-step:nth-child(2) .step-connector {
     display: none;
@@ -3157,7 +3187,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 24px;
+    --hero-cta-gap: 24px;
     margin-top: 29px;
   }
   .hero-cta .button {
@@ -3171,12 +3201,26 @@ body {
     font-size: 23px;
     padding-bottom: 10px;
     margin: 0;
+    transform: rotate(-6deg);
+  }
+  .hero-cta-note {
+    align-self: center;
+    max-width: 139px;
+    margin: 0;
   }
   .hero-comment-arrow {
-    width: 71px;
-    height: 31px;
-    left: -23px;
-    top: 30px;
+    top: calc(50% - 20px);
+    right: calc(100% + 3px);
+    left: auto;
+    bottom: auto;
+    width: calc(var(--hero-cta-gap) - 6px);
+    height: 22px;
+  }
+  .hero-arrow-inline {
+    display: block;
+  }
+  .hero-arrow-stacked {
+    display: none;
   }
   .hero-trust {
     margin-top: 40px;
@@ -3585,7 +3629,7 @@ body {
 }
 @media (max-width: 370px) {
   .hero-cta {
-    gap: 17px;
+    --hero-cta-gap: 17px;
   }
   .hero-cta .hand {
     font-size: 21px;
@@ -3596,9 +3640,8 @@ body {
     padding-inline: 14px;
     gap: 13px;
   }
-  .hero-comment-arrow {
-    top: 33px;
-    width: 63px;
+  .hero-cta-note {
+    max-width: 115px;
   }
   .hero-trust {
     gap: 11px;
@@ -3765,7 +3808,7 @@ body {
 .part-note {
   color: #6d6251;
 }
-.hero-cta > .hand {
+.hero-cta .hand {
   color: #a14725;
 }
 .console-tabs {

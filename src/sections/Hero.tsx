@@ -5,11 +5,7 @@ import {
   ShieldCheck,
   Wrench,
 } from "lucide-react";
-import {
-  PenArrow,
-  SketchDivider,
-  PartDrawing,
-} from "../illustrations/BenchSketches";
+import { SketchDivider, PartDrawing } from "../illustrations/BenchSketches";
 import type { Mode } from "../types";
 import { business } from "../data/business";
 import { TechnicalDrawing } from "../illustrations/TechnicalDrawing";
@@ -85,9 +81,32 @@ export function Hero({ mode }: { mode: Mode }) {
             <a className="button button-dark" href="#servicos">
               VER SERVIÇOS <ArrowDown size={17} aria-hidden="true" />
             </a>
-            <span className="hand">
-              {drone ? "a missão ainda não acabou." : "não compra outro ainda"}
-              <PenArrow direction="left" className="hero-comment-arrow" />
+            <span className="hero-cta-note">
+              <svg
+                className="hero-comment-arrow"
+                viewBox="0 0 40 28"
+                preserveAspectRatio="none"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  className="hero-arrow-inline"
+                  d="M36 7c-8-2-17 1-30 8m7-5-8 5 9 3"
+                  vectorEffect="non-scaling-stroke"
+                />
+                <path
+                  className="hero-arrow-stacked"
+                  d="M29 25c7-8 1-16-14-21m1 7-2-8 9 2"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg>
+              <span className="hand">
+                {drone ? "a missão ainda não acabou." : "não compra outro ainda"}
+              </span>
             </span>
           </div>
           <div className="hero-trust">
