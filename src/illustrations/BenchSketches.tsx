@@ -7,9 +7,11 @@ export type PartKind =
 export function PartDrawing({
   kind,
   className = "",
+  showDirectionArrow = true,
 }: {
   kind: PartKind;
   className?: string;
+  showDirectionArrow?: boolean;
 }) {
   const labels: Record<PartKind, string> = {
     analog: "Analógico em desenho técnico",
@@ -67,7 +69,7 @@ export function PartDrawing({
                   TMR
                 </text>
               </>
-            ) : (
+            ) : showDirectionArrow && (
               <path
                 d="M151 62q20-14 35-10m-9-5 10 5-10 5"
                 stroke="var(--orange)"

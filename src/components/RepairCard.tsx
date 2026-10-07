@@ -1,8 +1,5 @@
-import {
-  PartDrawing,
-  PenCircle,
-  PenArrow,
-} from "../illustrations/BenchSketches";
+import { PartDrawing, PenCircle } from "../illustrations/BenchSketches";
+import { SketchAnnotation } from "./SketchAnnotation";
 import { Check, CircleCheck, Plus, ShieldCheck } from "lucide-react";
 import type { RepairPlan } from "../types";
 export function RepairCard({
@@ -18,6 +15,22 @@ export function RepairCard({
   consoleName: string;
   onSelect: (plan: RepairPlan) => void;
 }) {
+  const selectButton = (
+    <button
+      type="button"
+      aria-label={`${selected ? "Reparo selecionado" : "Selecionar reparo"}: ${plan.tier} para ${consoleName}`}
+      className={`button ${plan.recommended ? "button-dark" : ""}`}
+      onClick={() => onSelect(plan)}
+      aria-pressed={selected}
+    >
+      {selected ? "REPARO SELECIONADO" : "SELECIONAR REPARO"}
+      {selected ? (
+        <CircleCheck size={17} aria-hidden="true" />
+      ) : (
+        <Plus size={17} aria-hidden="true" />
+      )}
+    </button>
+  );
   return (
     <article
       className={`plan-card ${plan.recommended ? "recommended" : ""} ${selected ? "selected" : ""}`}
@@ -36,7 +49,17 @@ export function RepairCard({
           <strong>{plan.price}</strong>
         </div>
         <div className="plan-component">
-          <PartDrawing kind={plan.tier === "Padrão" ? "analog" : "tmr"} />
+          <div className="repair-part-wrapper">
+            <PartDrawing
+              kind={plan.tier === "Padrão" ? "analog" : "tmr"}
+              showDirectionArrow={false}
+            />
+            <SketchAnnotation
+              text={plan.tier === "Padrão" ? "essa peça sai" : "essa entra ↑"}
+              direction="up-right"
+              className="part-note"
+            />
+          </div>
           <span className="mono">
             {plan.tier === "Padrão" ? "ANALÓGICO" : "JOYSTICK TMR"}
           </span>
@@ -44,10 +67,6 @@ export function RepairCard({
       </div>
       <h3 className="part-name">
         <span>{plan.part}</span>
-        <span className="part-note hand">
-          {plan.tier === "Padrão" ? "essa peça sai" : "essa entra ↑"}
-          <PenArrow direction="up" />
-        </span>
       </h3>
       <p className="plan-warranty">
         <span className="warranty-caption mono">GARANTIA</span>
@@ -65,24 +84,21 @@ export function RepairCard({
           </li>
         ))}
       </ul>
-      <span className="hand plan-note">
-        {plan.note}
-        {plan.recommended && <PenArrow direction="up" />}
-      </span>
-      <button
-        type="button"
-        aria-label={`${selected ? "Reparo selecionado" : "Selecionar reparo"}: ${plan.tier} para ${consoleName}`}
-        className={`button ${plan.recommended ? "button-dark" : ""}`}
-        onClick={() => onSelect(plan)}
-        aria-pressed={selected}
-      >
-        {selected ? "REPARO SELECIONADO" : "SELECIONAR REPARO"}
-        {selected ? (
-          <CircleCheck size={17} aria-hidden="true" />
-        ) : (
-          <Plus size={17} aria-hidden="true" />
-        )}
-      </button>
+      {plan.recommended ? (
+        <div className="repair-action-wrapper">
+          <SketchAnnotation
+            text={plan.note}
+            direction="down-left"
+            className="plan-note recommended-note"
+          />
+          {selectButton}
+        </div>
+      ) : (
+        <>
+          <span className="hand plan-note">{plan.note}</span>
+          {selectButton}
+        </>
+      )}
     </article>
   );
 }
