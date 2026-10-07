@@ -142,7 +142,7 @@ export function PartDrawing({
               stroke="none"
               fill="var(--orange)"
             >
-              conferir ↙
+              conferir
             </text>
           </>
         )}

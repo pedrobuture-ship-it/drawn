@@ -9,6 +9,7 @@ import { SketchDivider, PartDrawing } from "../illustrations/BenchSketches";
 import type { Mode } from "../types";
 import { business } from "../data/business";
 import { TechnicalDrawing } from "../illustrations/TechnicalDrawing";
+import { InlineSketchArrow } from "../components/InlineSketchArrow";
 export function Hero({ mode }: { mode: Mode }) {
   const drone = mode === "drones";
   return (
@@ -136,7 +137,8 @@ export function Hero({ mode }: { mode: Mode }) {
                 DETALHE {drone ? "01-A" : "02-A"} / SEM ESCALA
               </span>
               <span className="hand">
-                {drone ? "olhar de perto ↖" : "essa peça sai ↖"}
+                {drone ? "olhar de perto" : "essa peça sai"}{" "}
+                <InlineSketchArrow />
               </span>
             </span>
           </div>

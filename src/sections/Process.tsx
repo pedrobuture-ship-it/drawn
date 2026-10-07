@@ -2,6 +2,7 @@ import { ProcessStep } from "../components/ProcessStep";
 import { ClipboardCheck, Package, Search, Wrench } from "lucide-react";
 import type { Mode } from "../types";
 import { SectionHeading } from "../components/SectionHeading";
+import { InlineSketchArrow } from "../components/InlineSketchArrow";
 export function Process({ mode }: { mode: Mode }) {
   const steps = [
     {
@@ -42,7 +43,7 @@ export function Process({ mode }: { mode: Mode }) {
           ))}
         </div>
         <p className="hand process-note">
-          o teste é a última etapa. nunca um detalhe. <span>↖</span>
+        o teste é a última etapa. nunca um detalhe. <span><InlineSketchArrow /></span>
         </p>
       </div>
     </section>

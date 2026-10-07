@@ -781,6 +781,13 @@ h2 {
   font-size: 32px;
   margin-left: 7px;
 }
+.inline-sketch-arrow {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  vertical-align: -0.05em;
+  pointer-events: none;
+}
 .specialist-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

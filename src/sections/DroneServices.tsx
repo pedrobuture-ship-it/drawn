@@ -4,6 +4,7 @@ import type { PartKind } from "../illustrations/BenchSketches";
 import { droneServices } from "../data/droneServices";
 import { SectionHeading } from "../components/SectionHeading";
 import { whatsappUrl } from "../utils/whatsapp";
+import { InlineSketchArrow } from "../components/InlineSketchArrow";
 const drawings: Record<string, PartKind> = {
   camera: "gimbal",
   cpu: "board",
@@ -13,7 +14,7 @@ const drawings: Record<string, PartKind> = {
 };
 const notes = [
   "gimbal → conferir",
-  "olhar de perto ↖",
+  <>olhar de perto <InlineSketchArrow /></>,
   "essa peça sai ↑",
   "calibrar, depois testar",
   "culpado nº 01?",
